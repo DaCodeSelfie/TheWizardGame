@@ -1,0 +1,52 @@
+[gd_scene format=3 uid="uid://ce7kqlamtf4l0"]
+
+[ext_resource type="Script" uid="uid://5ymqomwx2wel" path="res://Code/Engine.cs" id="1_sutch"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_6kawv"]
+albedo_color = Color(0.29219002, 0.29219005, 0.29219002, 1)
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_k7fso"]
+material = SubResource("StandardMaterial3D_6kawv")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ifnxs"]
+albedo_color = Color(0.31061712, 0.31061712, 0.3106171, 1)
+
+[sub_resource type="BoxMesh" id="BoxMesh_o812k"]
+material = SubResource("StandardMaterial3D_ifnxs")
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_sutch"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_yaf7i"]
+size = Vector3(1.7432251, 1.6538086, 4.311035)
+
+[node name="Engine" type="StaticBody3D" unique_id=1485254724]
+script = ExtResource("1_sutch")
+FuelAttachPointPath = NodePath("FuelAttatchPoint")
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="." unique_id=955176284]
+transform = Transform3D(1, 0, 0, 0, 1.11, 0, 0, 0, 1, 0, 0, 0)
+mesh = SubResource("CylinderMesh_k7fso")
+
+[node name="MeshInstance3D3" type="MeshInstance3D" parent="." unique_id=1218076223]
+transform = Transform3D(1, 0, 0, 0, 1.11, 0, 0, 0, 1, -0.9865105, 0, 0)
+mesh = SubResource("CylinderMesh_k7fso")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=352524033]
+transform = Transform3D(2, 0, 0, 0, 1.5, 0, 0, 0, 1, 0.984, -0.36, 0)
+mesh = SubResource("BoxMesh_o812k")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=859953900]
+transform = Transform3D(3.635, 0, 0, 0, 2.33, 0, 0, 0, 1.3, 0.31983697, 0, 0)
+shape = SubResource("BoxShape3D_sutch")
+
+[node name="InteractArea" type="Area3D" parent="." unique_id=1037450519]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="InteractArea" unique_id=816289568]
+transform = Transform3D(5, 0, 0, 0, 2.77, 0, 0, 0, 2, -0.5206181, -0.9055249, -1.7133789)
+shape = SubResource("BoxShape3D_yaf7i")
+
+[node name="FuelAttatchPoint" type="Node3D" parent="." unique_id=2052795178]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.9981911, 0, 0)
+
+[connection signal="body_entered" from="InteractArea" to="." method="OnInteractAreaBodyEntered"]
+[connection signal="body_exited" from="InteractArea" to="." method="OnInteractAreaBodyExited"]

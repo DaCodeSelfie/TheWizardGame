@@ -1,0 +1,553 @@
+[gd_scene format=3 uid="uid://c3noclkwtpo00"]
+
+[ext_resource type="Script" uid="uid://bgsr4p2c02vky" path="res://Code/Ladder.cs" id="1_fc354"]
+[ext_resource type="Material" uid="uid://c2702vcr80w08" path="res://Sprites/Metal.tres" id="2_vwlf3"]
+[ext_resource type="Material" uid="uid://qcy4tifpwikp" path="res://Sprites/CopperMetal.tres" id="3_cve4p"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_4gp4o"]
+material = ExtResource("2_vwlf3")
+size = Vector3(1, 1.5, 6.5)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_s0hyv"]
+albedo_color = Color(0.29857555, 0.11744008, 0.006861435, 1)
+
+[sub_resource type="BoxMesh" id="BoxMesh_s54ic"]
+material = SubResource("StandardMaterial3D_s0hyv")
+
+[sub_resource type="Animation" id="Animation_s0hyv"]
+resource_name = "LadderAnim"
+length = 2.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("PartOne2:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector3(0, 1, 0), Vector3(0, 1, 8)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("PartOne3:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 1, 2),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector3(0, 2, 0), Vector3(0, 2, 8), Vector3(0, 2, 16)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("PartOne:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0, 0, 0)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("AnimatableBody3D/CollisionShape3D:position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0, 0, 0)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("AnimatableBody3D/CollisionShape3D2:position")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector3(0, 1, 0), Vector3(0, 1, 8)]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("AnimatableBody3D/CollisionShape3D3:position")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0, 1, 2),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector3(0, 2, 0), Vector3(0, 2, 8), Vector3(0, 2, 16)]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("BigGear2:rotation")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0.02, 2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector3(0, 0, 0), Vector3(-6.2831855, 0, 0)]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("BigGear:rotation")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(0.02, 2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector3(0, 0, 0), Vector3(6.2831855, 0, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_s54ic"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("PartOne2:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0, 1, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("PartOne3:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0, 2, 0)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("PartOne:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0, 0, 0)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("AnimatableBody3D/CollisionShape3D:position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0, 0, 0)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("AnimatableBody3D/CollisionShape3D2:position")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0, 1, 0)]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("AnimatableBody3D/CollisionShape3D3:position")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0, 2, 0)]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("BigGear2:rotation")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0, 0, 0)]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("BigGear:rotation")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0, 0, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_1j01k"]
+_data = {
+&"LadderAnim": SubResource("Animation_s0hyv"),
+&"RESET": SubResource("Animation_s54ic")
+}
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_s54ic"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_1j01k"]
+size = Vector3(3, 0.66882324, 1.1572876)
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_i76ws"]
+material = ExtResource("3_cve4p")
+
+[sub_resource type="BoxMesh" id="BoxMesh_i62em"]
+material = ExtResource("3_cve4p")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_uo7s5"]
+albedo_color = Color(0.30323282, 0.30323285, 0.30323276, 1)
+metallic = 0.59
+metallic_specular = 1.0
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_u0or8"]
+material = SubResource("StandardMaterial3D_uo7s5")
+
+[sub_resource type="Gradient" id="Gradient_4gp4o"]
+colors = PackedColorArray(0.23392546, 0.23392546, 0.23392543, 1, 0.40069774, 0.40069774, 0.40069768, 0)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_4iplr"]
+gradient = SubResource("Gradient_4gp4o")
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_i76ws"]
+lifetime_randomness = 0.15
+emission_shape_scale = Vector3(0.3, 0.725, 1)
+emission_shape = 1
+emission_sphere_radius = 2.21
+angle_min = 1.0728835e-05
+angle_max = 1.0728835e-05
+inherit_velocity_ratio = 0.115
+initial_velocity_min = 0.5
+initial_velocity_max = 1.5
+gravity = Vector3(0, 3.185, 0)
+scale_min = 0.29999998
+scale_max = 0.5
+color = Color(0.53333336, 0.53333336, 0.53333336, 1)
+color_ramp = SubResource("GradientTexture1D_4iplr")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_4njbo"]
+transparency = 1
+vertex_color_use_as_albedo = true
+
+[sub_resource type="BoxMesh" id="BoxMesh_u0or8"]
+material = SubResource("StandardMaterial3D_4njbo")
+size = Vector3(0.3, 0.3, 0.3)
+
+[node name="Ladder" type="Node3D" unique_id=1075510641]
+script = ExtResource("1_fc354")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=1745347326]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.5, 0, 0)
+mesh = SubResource("BoxMesh_4gp4o")
+
+[node name="PartOne" type="Node3D" parent="." unique_id=1381087224]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="PartOne" unique_id=1660740616]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 9, -2.5, 0, 0)
+mesh = SubResource("BoxMesh_s54ic")
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="PartOne" unique_id=1010886343]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 9, 2.5, 0, 0)
+mesh = SubResource("BoxMesh_s54ic")
+
+[node name="MeshInstance3D3" type="MeshInstance3D" parent="PartOne" unique_id=1397743979]
+transform = Transform3D(-3.278354e-08, 0, -4, 0, 0.75, 0, 0.75, 0, -1.7484555e-07, 0, 0, 0)
+mesh = SubResource("BoxMesh_s54ic")
+
+[node name="MeshInstance3D4" type="MeshInstance3D" parent="PartOne" unique_id=676895447]
+transform = Transform3D(-3.278354e-08, 0, -4, 0, 0.75, 0, 0.75, 0, -1.7484555e-07, 0, 0, -2)
+mesh = SubResource("BoxMesh_s54ic")
+
+[node name="MeshInstance3D7" type="MeshInstance3D" parent="PartOne" unique_id=85093580]
+transform = Transform3D(-3.278354e-08, 0, -4, 0, 0.75, 0, 0.75, 0, -1.7484555e-07, 0, 0, -4)
+mesh = SubResource("BoxMesh_s54ic")
+
+[node name="MeshInstance3D5" type="MeshInstance3D" parent="PartOne" unique_id=2108791102]
+transform = Transform3D(-3.278354e-08, 0, -4, 0, 0.75, 0, 0.75, 0, -1.7484555e-07, 0, 0, 2)
+mesh = SubResource("BoxMesh_s54ic")
+
+[node name="MeshInstance3D6" type="MeshInstance3D" parent="PartOne" unique_id=2093865027]
+transform = Transform3D(-3.278354e-08, 0, -4, 0, 0.75, 0, 0.75, 0, -1.7484555e-07, 0, 0, 4)
+mesh = SubResource("BoxMesh_s54ic")
+
+[node name="PartOne2" type="Node3D" parent="." unique_id=1352090876]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="PartOne2" unique_id=122516645]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 9, -2.5, 0, 0)
+mesh = SubResource("BoxMesh_s54ic")
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="PartOne2" unique_id=122423806]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 9, 2.5, 0, 0)
+mesh = SubResource("BoxMesh_s54ic")
+
+[node name="MeshInstance3D3" type="MeshInstance3D" parent="PartOne2" unique_id=1787672386]
+transform = Transform3D(-3.278354e-08, 0, -4, 0, 0.75, 0, 0.75, 0, -1.7484555e-07, 0, 0, 0)
+mesh = SubResource("BoxMesh_s54ic")
+
+[node name="MeshInstance3D4" type="MeshInstance3D" parent="PartOne2" unique_id=1008885487]
+transform = Transform3D(-3.278354e-08, 0, -4, 0, 0.75, 0, 0.75, 0, -1.7484555e-07, 0, 0, -2)
+mesh = SubResource("BoxMesh_s54ic")
+
+[node name="MeshInstance3D7" type="MeshInstance3D" parent="PartOne2" unique_id=1344597439]
+transform = Transform3D(-3.278354e-08, 0, -4, 0, 0.75, 0, 0.75, 0, -1.7484555e-07, 0, 0, -4)
+mesh = SubResource("BoxMesh_s54ic")
+
+[node name="MeshInstance3D5" type="MeshInstance3D" parent="PartOne2" unique_id=736264126]
+transform = Transform3D(-3.278354e-08, 0, -4, 0, 0.75, 0, 0.75, 0, -1.7484555e-07, 0, 0, 2)
+mesh = SubResource("BoxMesh_s54ic")
+
+[node name="MeshInstance3D6" type="MeshInstance3D" parent="PartOne2" unique_id=358207006]
+transform = Transform3D(-3.278354e-08, 0, -4, 0, 0.75, 0, 0.75, 0, -1.7484555e-07, 0, 0, 4)
+mesh = SubResource("BoxMesh_s54ic")
+
+[node name="PartOne3" type="Node3D" parent="." unique_id=1548725985]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2, 0)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="PartOne3" unique_id=140654345]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 9, -2.5, 0, 0)
+mesh = SubResource("BoxMesh_s54ic")
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="PartOne3" unique_id=818611177]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 9, 2.5, 0, 0)
+mesh = SubResource("BoxMesh_s54ic")
+
+[node name="MeshInstance3D3" type="MeshInstance3D" parent="PartOne3" unique_id=2097019072]
+transform = Transform3D(-3.278354e-08, 0, -4, 0, 0.75, 0, 0.75, 0, -1.7484555e-07, 0, 0, 0)
+mesh = SubResource("BoxMesh_s54ic")
+
+[node name="MeshInstance3D4" type="MeshInstance3D" parent="PartOne3" unique_id=1341334866]
+transform = Transform3D(-3.278354e-08, 0, -4, 0, 0.75, 0, 0.75, 0, -1.7484555e-07, 0, 0, -2)
+mesh = SubResource("BoxMesh_s54ic")
+
+[node name="MeshInstance3D7" type="MeshInstance3D" parent="PartOne3" unique_id=691094859]
+transform = Transform3D(-3.278354e-08, 0, -4, 0, 0.75, 0, 0.75, 0, -1.7484555e-07, 0, 0, -4)
+mesh = SubResource("BoxMesh_s54ic")
+
+[node name="MeshInstance3D5" type="MeshInstance3D" parent="PartOne3" unique_id=1325574137]
+transform = Transform3D(-3.278354e-08, 0, -4, 0, 0.75, 0, 0.75, 0, -1.7484555e-07, 0, 0, 2)
+mesh = SubResource("BoxMesh_s54ic")
+
+[node name="MeshInstance3D6" type="MeshInstance3D" parent="PartOne3" unique_id=1933472403]
+transform = Transform3D(-3.278354e-08, 0, -4, 0, 0.75, 0, 0.75, 0, -1.7484555e-07, 0, 0, 4)
+mesh = SubResource("BoxMesh_s54ic")
+
+[node name="LadderAnimation" type="AnimationPlayer" parent="." unique_id=1265085610]
+libraries/ = SubResource("AnimationLibrary_1j01k")
+playback_auto_capture = false
+
+[node name="AnimatableBody3D" type="AnimatableBody3D" parent="." unique_id=195203793]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="AnimatableBody3D" unique_id=872784700]
+transform = Transform3D(7, 0, 0, 0, 2, 0, 0, 0, 9, 0, 0, 0)
+shape = SubResource("BoxShape3D_s54ic")
+
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="AnimatableBody3D" unique_id=1904532226]
+transform = Transform3D(7, 0, 0, 0, 2, 0, 0, 0, 9, 0, 1, 0)
+shape = SubResource("BoxShape3D_s54ic")
+
+[node name="CollisionShape3D3" type="CollisionShape3D" parent="AnimatableBody3D" unique_id=1439131361]
+transform = Transform3D(7, 0, 0, 0, 2, 0, 0, 0, 9, 0, 2, 0)
+shape = SubResource("BoxShape3D_s54ic")
+
+[node name="ClimbZone" type="Area3D" parent="." unique_id=598044657]
+monitoring = false
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="ClimbZone" unique_id=356786873]
+transform = Transform3D(6, 0, 0, 0, 8.975, 0, 0, 0, 25, 0, 2.513844, 9.955414)
+shape = SubResource("BoxShape3D_1j01k")
+
+[node name="BigGear" type="Node3D" parent="." unique_id=1752652145]
+transform = Transform3D(1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, 3.3039198, 0.6358162, -1.541472)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="BigGear" unique_id=1731742268]
+transform = Transform3D(-4.3711385e-08, -0.099999964, 0, 0.9999999, -4.3711372e-09, 0, 0, 0, 0.99999994, 0.6423898, 0, 0)
+mesh = SubResource("CylinderMesh_i76ws")
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="BigGear" unique_id=1630494385]
+transform = Transform3D(0.37, 0, 0, 0, 0.55, 0, 0, 0, 0.15, 0.611, 0, 0.45)
+mesh = SubResource("BoxMesh_i62em")
+
+[node name="MeshInstance3D3" type="MeshInstance3D" parent="BigGear" unique_id=424054485]
+transform = Transform3D(0.37, 0, 0, 0, 0.55, 0, 0, 0, 0.15, 0.611, 0, -0.45)
+mesh = SubResource("BoxMesh_i62em")
+
+[node name="MeshInstance3D11" type="MeshInstance3D" parent="BigGear" unique_id=162816385]
+transform = Transform3D(0.37, 0, 0, 0, -6.5567085e-09, 0.15, 0, -0.15, -6.5567085e-09, 0.612, 0, -0.6)
+mesh = SubResource("BoxMesh_i62em")
+
+[node name="MeshInstance3D12" type="MeshInstance3D" parent="BigGear" unique_id=815453788]
+transform = Transform3D(0.37, 0, 0, 0, -6.5567085e-09, 0.15, 0, -0.15, -6.5567085e-09, 0.612, 0, 0.6)
+mesh = SubResource("BoxMesh_i62em")
+
+[node name="MeshInstance3D15" type="MeshInstance3D" parent="BigGear" unique_id=1892225361]
+transform = Transform3D(0.37, 0, 0, 0, 0.10606602, 0.10606603, 0, -0.10606603, 0.10606602, 0.612, 0.45, -0.45)
+mesh = SubResource("BoxMesh_i62em")
+
+[node name="MeshInstance3D16" type="MeshInstance3D" parent="BigGear" unique_id=1238191477]
+transform = Transform3D(0.37, 0, 0, 0, 0.10606602, 0.10606603, 0, -0.10606603, 0.10606602, 0.612, -0.45, 0.45)
+mesh = SubResource("BoxMesh_i62em")
+
+[node name="MeshInstance3D17" type="MeshInstance3D" parent="BigGear" unique_id=1210702925]
+transform = Transform3D(0.37, 0, 0, 0, 0.10606602, 0.10606603, 0, -0.10606603, 0.10606602, 0.612, 0.45, 0.45)
+mesh = SubResource("BoxMesh_i62em")
+
+[node name="MeshInstance3D18" type="MeshInstance3D" parent="BigGear" unique_id=684456947]
+transform = Transform3D(0.37, 0, 0, 0, 0.10606602, 0.10606603, 0, -0.10606603, 0.10606602, 0.612, -0.45, -0.45)
+mesh = SubResource("BoxMesh_i62em")
+
+[node name="MeshInstance3D13" type="MeshInstance3D" parent="BigGear" unique_id=1408858058]
+transform = Transform3D(0.37, 0, 0, 0, -0.15000002, -1.3113418e-08, 0, 1.3113418e-08, -0.15000002, 0.612, -0.6, 0)
+mesh = SubResource("BoxMesh_i62em")
+
+[node name="MeshInstance3D14" type="MeshInstance3D" parent="BigGear" unique_id=1452830953]
+transform = Transform3D(0.37, 0, 0, 0, -0.15000002, -1.3113418e-08, 0, 1.3113418e-08, -0.15000002, 0.612, 0.6, 0)
+mesh = SubResource("BoxMesh_i62em")
+
+[node name="MeshInstance3D4" type="MeshInstance3D" parent="BigGear" unique_id=1013225110]
+transform = Transform3D(0.37, 0, 0, 0, -2.4041263e-08, -0.15, 0, 0.55, -6.5567085e-09, 0.611, 0.45, 0)
+mesh = SubResource("BoxMesh_i62em")
+
+[node name="MeshInstance3D5" type="MeshInstance3D" parent="BigGear" unique_id=1386534365]
+transform = Transform3D(0.37, 0, 0, 0, -2.4041263e-08, -0.15, 0, 0.55, -6.5567085e-09, 0.611, -0.45, 0)
+mesh = SubResource("BoxMesh_i62em")
+
+[node name="MeshInstance3D6" type="MeshInstance3D" parent="BigGear" unique_id=1138301470]
+transform = Transform3D(0.37, 0, 0, 0, 0.24748737, -0.10606602, 0, 0.24748737, 0.10606602, 0.612, -0.35, 0.35)
+mesh = SubResource("BoxMesh_i62em")
+
+[node name="MeshInstance3D7" type="MeshInstance3D" parent="BigGear" unique_id=1907158015]
+transform = Transform3D(0.37, 0, 0, 0, 0.24748737, -0.10606602, 0, 0.24748737, 0.10606602, 0.612, 0.35, -0.35)
+mesh = SubResource("BoxMesh_i62em")
+
+[node name="MeshInstance3D8" type="MeshInstance3D" parent="BigGear" unique_id=1273006338]
+transform = Transform3D(0.37, 0, 0, 0, 0.24748737, 0.10606602, 0, -0.24748737, 0.10606602, 0.612, 0.35, 0.35)
+mesh = SubResource("BoxMesh_i62em")
+
+[node name="MeshInstance3D9" type="MeshInstance3D" parent="BigGear" unique_id=2000346965]
+transform = Transform3D(0.37, 0, 0, 0, 0.24748737, 0.10606602, 0, -0.24748737, 0.10606602, 0.612, -0.35, -0.35)
+mesh = SubResource("BoxMesh_i62em")
+
+[node name="MeshInstance3D10" type="MeshInstance3D" parent="BigGear" unique_id=275865586]
+transform = Transform3D(-1.0927845e-08, 0.063, 4.440892e-16, -0.067200504, -7.402317e-10, 0.24079886, 0.24079886, 2.652464e-09, 0.067200504, 0.706, 0, 0)
+mesh = SubResource("CylinderMesh_u0or8")
+
+[node name="BigGear2" type="Node3D" parent="." unique_id=2026226333]
+transform = Transform3D(1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, 3.3039198, -0.36622673, 0.14345074)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="BigGear2" unique_id=1762731945]
+transform = Transform3D(-4.3711385e-08, -0.099999964, 0, 0.99999994, -4.3711372e-09, 0, 0, 0, 1, 0.64238995, 0, 0)
+mesh = SubResource("CylinderMesh_i76ws")
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="BigGear2" unique_id=1007792923]
+transform = Transform3D(0.37, 0, 0, 0, 0.55, 0, 0, 0, 0.15, 0.611, 0, 0.45)
+mesh = SubResource("BoxMesh_i62em")
+
+[node name="MeshInstance3D3" type="MeshInstance3D" parent="BigGear2" unique_id=1782296718]
+transform = Transform3D(0.37, 0, 0, 0, 0.55, 0, 0, 0, 0.15, 0.611, 0, -0.45)
+mesh = SubResource("BoxMesh_i62em")
+
+[node name="MeshInstance3D11" type="MeshInstance3D" parent="BigGear2" unique_id=50420063]
+transform = Transform3D(0.37, 0, 0, 0, -6.5567085e-09, 0.15, 0, -0.15, -6.5567085e-09, 0.612, 0, -0.6)
+mesh = SubResource("BoxMesh_i62em")
+
+[node name="MeshInstance3D12" type="MeshInstance3D" parent="BigGear2" unique_id=364735845]
+transform = Transform3D(0.37, 0, 0, 0, -6.5567085e-09, 0.15, 0, -0.15, -6.5567085e-09, 0.612, 0, 0.6)
+mesh = SubResource("BoxMesh_i62em")
+
+[node name="MeshInstance3D15" type="MeshInstance3D" parent="BigGear2" unique_id=2016392553]
+transform = Transform3D(0.37, 0, 0, 0, 0.10606602, 0.10606603, 0, -0.10606603, 0.10606602, 0.612, 0.45, -0.45)
+mesh = SubResource("BoxMesh_i62em")
+
+[node name="MeshInstance3D16" type="MeshInstance3D" parent="BigGear2" unique_id=1360517644]
+transform = Transform3D(0.37, 0, 0, 0, 0.10606602, 0.10606603, 0, -0.10606603, 0.10606602, 0.612, -0.45, 0.45)
+mesh = SubResource("BoxMesh_i62em")
+
+[node name="MeshInstance3D17" type="MeshInstance3D" parent="BigGear2" unique_id=56493672]
+transform = Transform3D(0.37, 0, 0, 0, 0.10606602, 0.10606603, 0, -0.10606603, 0.10606602, 0.612, 0.45, 0.45)
+mesh = SubResource("BoxMesh_i62em")
+
+[node name="MeshInstance3D18" type="MeshInstance3D" parent="BigGear2" unique_id=285711095]
+transform = Transform3D(0.37, 0, 0, 0, 0.10606602, 0.10606603, 0, -0.10606603, 0.10606602, 0.612, -0.45, -0.45)
+mesh = SubResource("BoxMesh_i62em")
+
+[node name="MeshInstance3D13" type="MeshInstance3D" parent="BigGear2" unique_id=929178923]
+transform = Transform3D(0.37, 0, 0, 0, -0.15000002, -1.3113418e-08, 0, 1.3113418e-08, -0.15000002, 0.612, -0.6, 0)
+mesh = SubResource("BoxMesh_i62em")
+
+[node name="MeshInstance3D14" type="MeshInstance3D" parent="BigGear2" unique_id=50763898]
+transform = Transform3D(0.37, 0, 0, 0, -0.15000002, -1.3113418e-08, 0, 1.3113418e-08, -0.15000002, 0.612, 0.6, 0)
+mesh = SubResource("BoxMesh_i62em")
+
+[node name="MeshInstance3D4" type="MeshInstance3D" parent="BigGear2" unique_id=1721477254]
+transform = Transform3D(0.37, 0, 0, 0, -2.4041263e-08, -0.15, 0, 0.55, -6.5567085e-09, 0.611, 0.45, 0)
+mesh = SubResource("BoxMesh_i62em")
+
+[node name="MeshInstance3D5" type="MeshInstance3D" parent="BigGear2" unique_id=898934781]
+transform = Transform3D(0.37, 0, 0, 0, -2.4041263e-08, -0.15, 0, 0.55, -6.5567085e-09, 0.611, -0.45, 0)
+mesh = SubResource("BoxMesh_i62em")
+
+[node name="MeshInstance3D6" type="MeshInstance3D" parent="BigGear2" unique_id=1630964013]
+transform = Transform3D(0.37, 0, 0, 0, 0.24748737, -0.10606602, 0, 0.24748737, 0.10606602, 0.612, -0.35, 0.35)
+mesh = SubResource("BoxMesh_i62em")
+
+[node name="MeshInstance3D7" type="MeshInstance3D" parent="BigGear2" unique_id=685891797]
+transform = Transform3D(0.37, 0, 0, 0, 0.24748737, -0.10606602, 0, 0.24748737, 0.10606602, 0.612, 0.35, -0.35)
+mesh = SubResource("BoxMesh_i62em")
+
+[node name="MeshInstance3D8" type="MeshInstance3D" parent="BigGear2" unique_id=1871375793]
+transform = Transform3D(0.37, 0, 0, 0, 0.24748737, 0.10606602, 0, -0.24748737, 0.10606602, 0.612, 0.35, 0.35)
+mesh = SubResource("BoxMesh_i62em")
+
+[node name="MeshInstance3D9" type="MeshInstance3D" parent="BigGear2" unique_id=1064889370]
+transform = Transform3D(0.37, 0, 0, 0, 0.24748737, 0.10606602, 0, -0.24748737, 0.10606602, 0.612, -0.35, -0.35)
+mesh = SubResource("BoxMesh_i62em")
+
+[node name="MeshInstance3D10" type="MeshInstance3D" parent="BigGear2" unique_id=1732450569]
+transform = Transform3D(-1.0927845e-08, 0.063, 4.440892e-16, -0.067200504, -7.402317e-10, 0.24079886, 0.24079886, 2.652464e-09, 0.067200504, 0.706, 0, 0)
+mesh = SubResource("CylinderMesh_u0or8")
+
+[node name="SmokeParticles" type="GPUParticles3D" parent="." unique_id=424043058]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0, 0)
+amount = 27
+lifetime = 5.13
+process_material = SubResource("ParticleProcessMaterial_i76ws")
+draw_pass_1 = SubResource("BoxMesh_u0or8")
+
+[connection signal="body_entered" from="ClimbZone" to="." method="OnClimbZoneBodyEntered"]
+[connection signal="body_exited" from="ClimbZone" to="." method="OnClimbZoneBodyExited"]

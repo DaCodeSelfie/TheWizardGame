@@ -1,0 +1,30 @@
+[gd_scene format=3 uid="uid://8l62kso57ji"]
+
+[ext_resource type="Script" uid="uid://bq1h78atarvki" path="res://Code/MovingPlatform.cs" id="1_5olv3"]
+[ext_resource type="Texture2D" uid="uid://3n4xsyuwcuav" path="res://Sprites/WoodFloor.png" id="2_pbjlq"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_cbc1i"]
+albedo_texture = ExtResource("2_pbjlq")
+uv1_scale = Vector3(3, 3, 3)
+uv1_offset = Vector3(0.36, 0, 0)
+texture_filter = 0
+
+[sub_resource type="BoxMesh" id="BoxMesh_o1nts"]
+material = SubResource("StandardMaterial3D_cbc1i")
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_5olv3"]
+
+[node name="AnimatableBody3D" type="AnimatableBody3D" unique_id=1109511720]
+script = ExtResource("1_5olv3")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=60514549]
+transform = Transform3D(5, 0, 0, 0, 0.1, 0, 0, 0, 5, 0, 0, 0)
+mesh = SubResource("BoxMesh_o1nts")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=2049914435]
+transform = Transform3D(5, 0, 0, 0, 0.1, 0, 0, 0, 5, 0, 0, 0)
+shape = SubResource("BoxShape3D_5olv3")
+
+[node name="StartPoint" type="Marker3D" parent="." unique_id=837051363]
+
+[node name="EndPoint" type="Marker3D" parent="." unique_id=1110546062]

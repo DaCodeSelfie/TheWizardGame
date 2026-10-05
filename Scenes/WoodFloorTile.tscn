@@ -1,0 +1,24 @@
+[gd_scene format=3 uid="uid://bejqd5cnu7jbr"]
+
+[ext_resource type="Texture2D" uid="uid://3n4xsyuwcuav" path="res://Sprites/WoodFloor.png" id="1_drqsg"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_j6yvp"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_tm18u"]
+albedo_texture = ExtResource("1_drqsg")
+uv1_scale = Vector3(3, 3, 3)
+uv1_offset = Vector3(0.36, 0, 0)
+texture_filter = 0
+
+[sub_resource type="BoxMesh" id="BoxMesh_keh2o"]
+material = SubResource("StandardMaterial3D_tm18u")
+
+[node name="Node3D" type="StaticBody3D" unique_id=1643112132]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1003066438]
+transform = Transform3D(5, 0, 0, 0, 0.1, 0, 0, 0, 5, 0, 0, 0)
+shape = SubResource("BoxShape3D_j6yvp")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=1471968769]
+transform = Transform3D(5, 0, 0, 0, 0.1, 0, 0, 0, 5, 0, 0, 0)
+mesh = SubResource("BoxMesh_keh2o")

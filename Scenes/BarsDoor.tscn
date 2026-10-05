@@ -1,0 +1,40 @@
+[gd_scene format=3 uid="uid://bqkbrjf158smu"]
+
+[ext_resource type="Script" uid="uid://cshc4octlfl8q" path="res://Code/Gate.cs" id="1_lc4j7"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_ms737"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_bsu1e"]
+albedo_color = Color(0.47788018, 0.47788012, 0.47788012, 1)
+metallic = 1.0
+metallic_specular = 1.0
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_b50w5"]
+material = SubResource("StandardMaterial3D_bsu1e")
+
+[node name="Bars" type="StaticBody3D" unique_id=1494106147]
+script = ExtResource("1_lc4j7")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1495614757]
+transform = Transform3D(6, 0, 0, 0, 5, 0, 0, 0, 0.5, 0, 0, 0)
+shape = SubResource("BoxShape3D_ms737")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=1122270167]
+transform = Transform3D(0.25, 0, 0, 0, 2.5, 0, 0, 0, 0.25, 0, 0, 0)
+mesh = SubResource("CylinderMesh_b50w5")
+
+[node name="MeshInstance3D5" type="MeshInstance3D" parent="." unique_id=1060085439]
+transform = Transform3D(0.25, 0, 0, 0, 2.5, 0, 0, 0, 0.25, -1.25, 0, 0)
+mesh = SubResource("CylinderMesh_b50w5")
+
+[node name="MeshInstance3D4" type="MeshInstance3D" parent="." unique_id=807713824]
+transform = Transform3D(0.25, 0, 0, 0, 2.5, 0, 0, 0, 0.25, 1.25, 0, 0)
+mesh = SubResource("CylinderMesh_b50w5")
+
+[node name="MeshInstance3D3" type="MeshInstance3D" parent="." unique_id=1305010738]
+transform = Transform3D(0.25, 0, 0, 0, 2.5, 0, 0, 0, 0.25, -2.5, 0, 0)
+mesh = SubResource("CylinderMesh_b50w5")
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="." unique_id=1477317043]
+transform = Transform3D(0.25, 0, 0, 0, 2.5, 0, 0, 0, 0.25, 2.5, 0, 0)
+mesh = SubResource("CylinderMesh_b50w5")

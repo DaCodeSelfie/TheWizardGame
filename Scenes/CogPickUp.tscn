@@ -1,0 +1,119 @@
+[gd_scene format=3 uid="uid://dc8qadfo16kly"]
+
+[ext_resource type="Material" uid="uid://qcy4tifpwikp" path="res://Sprites/CopperMetal.tres" id="1_vxky5"]
+[ext_resource type="Script" uid="uid://dhcdl6xjwculo" path="res://Code/CarriableItem.cs" id="1_xdpxj"]
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_1imq7"]
+material = ExtResource("1_vxky5")
+
+[sub_resource type="BoxMesh" id="BoxMesh_1imq7"]
+material = ExtResource("1_vxky5")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_uo7s5"]
+albedo_color = Color(0.30323282, 0.30323285, 0.30323276, 1)
+metallic = 0.59
+metallic_specular = 1.0
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_dxx7a"]
+material = SubResource("StandardMaterial3D_uo7s5")
+
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_xdpxj"]
+height = 2.5
+
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_fn1s8"]
+height = 6.8065796
+radius = 2.4580078
+
+[node name="CogPickup" type="RigidBody3D" unique_id=176259565]
+transform = Transform3D(0.75, 0, 0, 0, 0.75, 0, 0, 0, 0.75, 0, 0, 0)
+mass = 0.3
+script = ExtResource("1_xdpxj")
+ItemId = "Cog"
+CarrySpringStrength = 10.0
+
+[node name="Node3D" type="Node3D" parent="." unique_id=143932308]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Node3D" unique_id=1618878134]
+transform = Transform3D(-4.371139e-08, -0.099999964, 0, 0.99999994, -4.3711372e-09, 0, 0, 0, 1, 0.64238995, 0, 0)
+mesh = SubResource("CylinderMesh_1imq7")
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="Node3D" unique_id=303688846]
+transform = Transform3D(0.37, 0, 0, 0, 0.5500001, 0, 0, 0, 0.15, 0.611, 0, 0.45)
+mesh = SubResource("BoxMesh_1imq7")
+
+[node name="MeshInstance3D3" type="MeshInstance3D" parent="Node3D" unique_id=1460185885]
+transform = Transform3D(0.37, 0, 0, 0, 0.5500001, 0, 0, 0, 0.15, 0.611, 0, -0.45)
+mesh = SubResource("BoxMesh_1imq7")
+
+[node name="MeshInstance3D11" type="MeshInstance3D" parent="Node3D" unique_id=956313627]
+transform = Transform3D(0.37, 0, 0, 0, -6.5567085e-09, 0.15, 0, -0.15, -6.5567085e-09, 0.612, 0, -0.6)
+mesh = SubResource("BoxMesh_1imq7")
+
+[node name="MeshInstance3D12" type="MeshInstance3D" parent="Node3D" unique_id=602418011]
+transform = Transform3D(0.37, 0, 0, 0, -6.5567085e-09, 0.15, 0, -0.15, -6.5567085e-09, 0.612, 0, 0.6)
+mesh = SubResource("BoxMesh_1imq7")
+
+[node name="MeshInstance3D15" type="MeshInstance3D" parent="Node3D" unique_id=632453987]
+transform = Transform3D(0.37, 0, 0, 0, 0.10606602, 0.10606603, 0, -0.10606603, 0.10606602, 0.612, 0.45, -0.45)
+mesh = SubResource("BoxMesh_1imq7")
+
+[node name="MeshInstance3D16" type="MeshInstance3D" parent="Node3D" unique_id=1622184260]
+transform = Transform3D(0.37, 0, 0, 0, 0.10606602, 0.10606603, 0, -0.10606603, 0.10606602, 0.612, -0.45, 0.45)
+mesh = SubResource("BoxMesh_1imq7")
+
+[node name="MeshInstance3D17" type="MeshInstance3D" parent="Node3D" unique_id=591322410]
+transform = Transform3D(0.37, 0, 0, 0, 0.10606602, 0.10606603, 0, -0.10606603, 0.10606602, 0.612, 0.45, 0.45)
+mesh = SubResource("BoxMesh_1imq7")
+
+[node name="MeshInstance3D18" type="MeshInstance3D" parent="Node3D" unique_id=235715165]
+transform = Transform3D(0.37, 0, 0, 0, 0.10606602, 0.10606603, 0, -0.10606603, 0.10606602, 0.612, -0.45, -0.45)
+mesh = SubResource("BoxMesh_1imq7")
+
+[node name="MeshInstance3D13" type="MeshInstance3D" parent="Node3D" unique_id=887091957]
+transform = Transform3D(0.37, 0, 0, 0, -0.15000002, -1.3113418e-08, 0, 1.3113418e-08, -0.15000002, 0.612, -0.6, 0)
+mesh = SubResource("BoxMesh_1imq7")
+
+[node name="MeshInstance3D14" type="MeshInstance3D" parent="Node3D" unique_id=17999910]
+transform = Transform3D(0.37, 0, 0, 0, -0.15000002, -1.3113418e-08, 0, 1.3113418e-08, -0.15000002, 0.612, 0.6, 0)
+mesh = SubResource("BoxMesh_1imq7")
+
+[node name="MeshInstance3D4" type="MeshInstance3D" parent="Node3D" unique_id=18982660]
+transform = Transform3D(0.37, 0, 0, 0, -2.4041263e-08, -0.15, 0, 0.5500001, -6.5567085e-09, 0.611, 0.45, 0)
+mesh = SubResource("BoxMesh_1imq7")
+
+[node name="MeshInstance3D5" type="MeshInstance3D" parent="Node3D" unique_id=652740075]
+transform = Transform3D(0.37, 0, 0, 0, -2.4041263e-08, -0.15, 0, 0.5500001, -6.5567085e-09, 0.611, -0.45, 0)
+mesh = SubResource("BoxMesh_1imq7")
+
+[node name="MeshInstance3D6" type="MeshInstance3D" parent="Node3D" unique_id=880933978]
+transform = Transform3D(0.37, 0, 0, 0, 0.24748737, -0.10606602, 0, 0.24748737, 0.10606602, 0.612, -0.35, 0.35)
+mesh = SubResource("BoxMesh_1imq7")
+
+[node name="MeshInstance3D7" type="MeshInstance3D" parent="Node3D" unique_id=1359535429]
+transform = Transform3D(0.37, 0, 0, 0, 0.24748737, -0.10606602, 0, 0.24748737, 0.10606602, 0.612, 0.35, -0.35)
+mesh = SubResource("BoxMesh_1imq7")
+
+[node name="MeshInstance3D8" type="MeshInstance3D" parent="Node3D" unique_id=1360073870]
+transform = Transform3D(0.37, 0, 0, 0, 0.24748737, 0.10606602, 0, -0.24748737, 0.10606602, 0.612, 0.35, 0.35)
+mesh = SubResource("BoxMesh_1imq7")
+
+[node name="MeshInstance3D9" type="MeshInstance3D" parent="Node3D" unique_id=1314655520]
+transform = Transform3D(0.37, 0, 0, 0, 0.24748737, 0.10606602, 0, -0.24748737, 0.10606602, 0.612, -0.35, -0.35)
+mesh = SubResource("BoxMesh_1imq7")
+
+[node name="MeshInstance3D10" type="MeshInstance3D" parent="Node3D" unique_id=621860933]
+transform = Transform3D(-1.0927845e-08, 0.06300001, 4.440892e-16, -0.067200504, -7.4023176e-10, 0.24079888, 0.24079888, 2.652464e-09, 0.067200504, 0.70600003, 0, 0)
+mesh = SubResource("CylinderMesh_dxx7a")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1743299458]
+transform = Transform3D(-5.9010375e-08, 0.15, 0, -1.3500001, -6.5567085e-09, 0, 0, 0, 1.3500001, 0.6, 0, 0)
+shape = SubResource("CylinderShape3D_xdpxj")
+
+[node name="Area3D" type="Area3D" parent="." unique_id=1462933195]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D" unique_id=957109310]
+transform = Transform3D(-4.371138e-08, 0.99999976, 0, -0.99999976, -4.371138e-08, 0, 0, 0, 0.99999976, 1.4816989, -3.562621e-08, 0)
+shape = SubResource("CylinderShape3D_fn1s8")
+
+[connection signal="body_entered" from="Area3D" to="." method="OnInteractAreaBodyEntered"]
+[connection signal="body_exited" from="Area3D" to="." method="OnInteractAreaBodyExited"]

@@ -1,0 +1,33 @@
+[gd_scene format=3 uid="uid://vmkal32i20c"]
+
+[ext_resource type="Script" uid="uid://dhcdl6xjwculo" path="res://Code/CarriableItem.cs" id="1_r763g"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_1ab06"]
+albedo_color = Color(0.58584684, 1.4439225e-06, 2.8878452e-07, 1)
+
+[sub_resource type="BoxMesh" id="BoxMesh_r763g"]
+material = SubResource("StandardMaterial3D_1ab06")
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_hr170"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_8tnqh"]
+
+[node name="TNT" type="RigidBody3D" unique_id=2067972058]
+mass = 0.5
+script = ExtResource("1_r763g")
+ItemId = "TNT"
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=1175971048]
+mesh = SubResource("BoxMesh_r763g")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1205279695]
+shape = SubResource("BoxShape3D_hr170")
+
+[node name="Area3D" type="Area3D" parent="." unique_id=1770570617]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D" unique_id=970336761]
+transform = Transform3D(2.3, 0, 0, 0, 2.3, 0, 0, 0, 2.3, 0, 0, 0)
+shape = SubResource("BoxShape3D_8tnqh")
+
+[connection signal="body_entered" from="Area3D" to="." method="OnInteractAreaBodyEntered"]
+[connection signal="body_exited" from="Area3D" to="." method="OnInteractAreaBodyExited"]

@@ -1,0 +1,53 @@
+[gd_scene format=3 uid="uid://bayoq7gdsyge2"]
+
+[ext_resource type="Texture2D" uid="uid://r5bqwfylerr8" path="res://Sprites/WaterSprite.png" id="1_b7hct"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ybqch"]
+atlas = ExtResource("1_b7hct")
+region = Rect2(0, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_yuloa"]
+atlas = ExtResource("1_b7hct")
+region = Rect2(64, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_rgebh"]
+atlas = ExtResource("1_b7hct")
+region = Rect2(128, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_b1vgi"]
+atlas = ExtResource("1_b7hct")
+region = Rect2(192, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_gywq6"]
+atlas = ExtResource("1_b7hct")
+region = Rect2(256, 0, 64, 64)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_ktw2f"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ybqch")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_yuloa")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_rgebh")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_b1vgi")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_gywq6")
+}],
+"loop": true,
+"name": &"Water",
+"speed": 3.0
+}]
+
+[node name="Water" type="AnimatedSprite2D" unique_id=2075061416]
+sprite_frames = SubResource("SpriteFrames_ktw2f")
+animation = &"Water"
+autoplay = "Water"
+frame = 3
+frame_progress = 0.8756814

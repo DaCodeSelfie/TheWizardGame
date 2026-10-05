@@ -1,0 +1,13 @@
+[gd_scene format=3 uid="uid://qthr3wxgiw01"]
+
+[ext_resource type="PackedScene" uid="uid://bqx7t3dcxxs5x" path="res://Sprites/BlueBookCroco.gltf" id="1_h0sf5"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_tib85"]
+
+[node name="BlueBook" type="StaticBody3D" unique_id=1084491166]
+
+[node name="default2" parent="." unique_id=1476211805 instance=ExtResource("1_h0sf5")]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1914717242]
+transform = Transform3D(0.375, 0, 0, 0, 1, 0, 0, 0, 1, 0.185, 0.5, -0.5)
+shape = SubResource("BoxShape3D_tib85")

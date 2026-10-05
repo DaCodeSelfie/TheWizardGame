@@ -1,0 +1,215 @@
+[gd_scene format=3 uid="uid://cpwubgnqjghex"]
+
+[ext_resource type="Script" uid="uid://bbe88s8mj5mgn" path="res://Code/Torch.cs" id="1_pa17o"]
+[ext_resource type="Texture2D" uid="uid://3n4xsyuwcuav" path="res://Sprites/WoodFloor.png" id="2_beu3c"]
+[ext_resource type="Shader" uid="uid://bafdy13tdvqo0" path="res://Shaders/WaterShader.gdshader" id="2_h1t0l"]
+[ext_resource type="Material" uid="uid://c2702vcr80w08" path="res://Sprites/Metal.tres" id="3_spjw2"]
+[ext_resource type="AudioStream" uid="uid://dy3bienk08u3o" path="res://MusicAndSoundEffects/dragon-studio-fire-crackling-sounds-427410.mp3" id="5_kg6dd"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_beu3c"]
+albedo_color = Color(0.4452231, 0.22685435, 1.4439226e-07, 1)
+albedo_texture = ExtResource("2_beu3c")
+uv1_scale = Vector3(1.32, 1.32, 1.32)
+texture_filter = 0
+
+[sub_resource type="BoxMesh" id="BoxMesh_spjw2"]
+material = SubResource("StandardMaterial3D_beu3c")
+
+[sub_resource type="BoxMesh" id="BoxMesh_7ufd5"]
+material = ExtResource("3_spjw2")
+
+[sub_resource type="QuadMesh" id="QuadMesh_d43v6"]
+material = ExtResource("3_spjw2")
+
+[sub_resource type="PrismMesh" id="PrismMesh_n1y4a"]
+material = ExtResource("3_spjw2")
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_mjdc7"]
+render_priority = 0
+shader = ExtResource("2_h1t0l")
+shader_parameter/flame_tint = Color(1, 0.3, 0.1, 1)
+shader_parameter/wave_speed = 3.0
+shader_parameter/wave_strength = 0.0
+shader_parameter/roughness_val = 0.0
+shader_parameter/emission_color = Color(1, 0.4, 0.1, 1)
+shader_parameter/emission_energy = 3.0
+
+[sub_resource type="BoxMesh" id="BoxMesh_hs836"]
+material = SubResource("ShaderMaterial_mjdc7")
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_li82y"]
+
+[sub_resource type="Gradient" id="Gradient_spjw2"]
+colors = PackedColorArray(0.19215687, 0.19215687, 0.19215687, 0.93333334, 0.19215687, 0.19215687, 0.19215687, 0)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_kg6dd"]
+gradient = SubResource("Gradient_spjw2")
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_7ufd5"]
+lifetime_randomness = 0.17
+direction = Vector3(1, 1, 0)
+spread = 27.609
+initial_velocity_min = 0.5
+initial_velocity_max = 1.5
+gravity = Vector3(0, 0.1, 0)
+scale_min = 0.099999994
+scale_max = 0.25
+color = Color(0.49019608, 0.49019608, 0.49019608, 0.7176471)
+color_ramp = SubResource("GradientTexture1D_kg6dd")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_spjw2"]
+transparency = 1
+vertex_color_use_as_albedo = true
+
+[sub_resource type="BoxMesh" id="BoxMesh_kg6dd"]
+material = SubResource("StandardMaterial3D_spjw2")
+size = Vector3(0.2, 0.2, 0.2)
+
+[sub_resource type="Gradient" id="Gradient_kg6dd"]
+colors = PackedColorArray(1.5644959, 0, 0.083895326, 1, 1.3121161, 0.48279116, 0.13764775, 1)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_7ufd5"]
+gradient = SubResource("Gradient_kg6dd")
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_spjw2"]
+emission_shape = 3
+emission_box_extents = Vector3(0.5, 0.5, 0.5)
+initial_velocity_min = 0.29999998
+initial_velocity_max = 0.29999998
+gravity = Vector3(0, 0.75, 0)
+scale_min = 0.099999994
+scale_max = 0.099999994
+color = Color(1, 1, 1, 0.84313726)
+color_ramp = SubResource("GradientTexture1D_7ufd5")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_05x6m"]
+vertex_color_use_as_albedo = true
+
+[sub_resource type="BoxMesh" id="BoxMesh_05x6m"]
+material = SubResource("StandardMaterial3D_05x6m")
+size = Vector3(0.2, 0.2, 0.2)
+
+[node name="Torch" type="Node3D" unique_id=933263533]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.07650089, -0.04945731, 0)
+script = ExtResource("1_pa17o")
+
+[node name="TorchV_2" type="Node3D" parent="." unique_id=1782288269]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="TorchV_2" unique_id=1461281395]
+transform = Transform3D(1, 0, 0, 0, 5, 0, 0, 0, 1, 0, 0, 0)
+mesh = SubResource("BoxMesh_spjw2")
+
+[node name="MeshInstance3D6" type="MeshInstance3D" parent="TorchV_2" unique_id=933497456]
+transform = Transform3D(-4.267799e-08, -0.25881904, -0.09659258, -3.8567047e-09, 0.9659258, -0.025881905, 1, -7.320585e-09, -4.222196e-09, -0.5844074, 1.0092161, 0)
+mesh = SubResource("BoxMesh_7ufd5")
+
+[node name="MeshInstance3D8" type="MeshInstance3D" parent="TorchV_2" unique_id=265516685]
+transform = Transform3D(-4.371139e-08, 0.258819, 0.09659258, 0, 0.96592575, -0.025881905, -1, -1.1313339e-08, -4.222196e-09, 0.584, 1.009, 0)
+mesh = SubResource("BoxMesh_7ufd5")
+
+[node name="MeshInstance3D14" type="MeshInstance3D" parent="TorchV_2" unique_id=1941817414]
+transform = Transform3D(-1.0000001, 1.8633926e-08, 8.444392e-09, -3.8567043e-09, 0.96592593, -0.025881909, -8.638938e-08, -0.25881904, -0.09659258, 0, 1.009, -0.584)
+mesh = SubResource("BoxMesh_7ufd5")
+
+[node name="MeshInstance3D15" type="MeshInstance3D" parent="TorchV_2" unique_id=130907231]
+transform = Transform3D(1.0000001, 0, 0, 0, 0.96592593, -0.025881905, 0, 0.25881907, 0.09659258, 0, 1.009, 0.584)
+mesh = SubResource("BoxMesh_7ufd5")
+
+[node name="MeshInstance3D3" type="MeshInstance3D" parent="TorchV_2" unique_id=1905180744]
+transform = Transform3D(1, 0, 0, 0, 1.0000001, 0, 0, 0, 1.0000001, 0, 1.98, 0.764)
+mesh = SubResource("QuadMesh_d43v6")
+
+[node name="MeshInstance3D9" type="MeshInstance3D" parent="TorchV_2" unique_id=1791775357]
+transform = Transform3D(1, 0, 0, 0, -1.0000001, 8.7422784e-08, 0, -8.7422784e-08, -1.0000001, 0, 1.98, -0.764)
+mesh = SubResource("QuadMesh_d43v6")
+
+[node name="MeshInstance3D5" type="MeshInstance3D" parent="TorchV_2" unique_id=978075295]
+transform = Transform3D(-4.371139e-08, 0, 1.0000001, 0, 1.0000001, 0, -1, 0, -4.3711392e-08, 0.7637352, 1.98, 0)
+mesh = SubResource("QuadMesh_d43v6")
+
+[node name="MeshInstance3D7" type="MeshInstance3D" parent="TorchV_2" unique_id=933035120]
+transform = Transform3D(4.4703484e-08, 0, -1, 0, 1.0000001, 0, 0.9999999, 0, 4.4703484e-08, -0.764, 1.98, 0)
+mesh = SubResource("QuadMesh_d43v6")
+
+[node name="MeshInstance3D10" type="MeshInstance3D" parent="TorchV_2" unique_id=1292805430]
+transform = Transform3D(-0.2660762, 0.26607615, -7.0151523e-10, -1.6821412e-08, -1.6448093e-08, 0.99999994, 0.2660762, 0.26607615, 6.2518744e-08, -0.5, 1.9818273, -0.5)
+mesh = SubResource("PrismMesh_n1y4a")
+
+[node name="MeshInstance3D19" type="MeshInstance3D" parent="TorchV_2" unique_id=1467491551]
+transform = Transform3D(-0.2660762, 0.26607615, -7.0151523e-10, -1.6821412e-08, -1.6448093e-08, 0.99999994, 0.2660762, 0.26607615, 6.2518744e-08, -0.5, 2.9818273, -0.5)
+cast_shadow = 0
+mesh = SubResource("PrismMesh_n1y4a")
+
+[node name="MeshInstance3D11" type="MeshInstance3D" parent="TorchV_2" unique_id=886437756]
+transform = Transform3D(0.26607618, 0.26607612, 6.251874e-08, -1.6821412e-08, -1.6448093e-08, 0.99999994, 0.26607618, -0.26607612, 7.015116e-10, -0.5, 1.982, 0.5)
+mesh = SubResource("PrismMesh_n1y4a")
+
+[node name="MeshInstance3D18" type="MeshInstance3D" parent="TorchV_2" unique_id=2090961349]
+transform = Transform3D(0.26607618, 0.26607612, 6.251874e-08, -1.6821412e-08, -1.6448093e-08, 0.99999994, 0.26607618, -0.26607612, 7.015116e-10, -0.5, 2.9819999, 0.5)
+cast_shadow = 0
+mesh = SubResource("PrismMesh_n1y4a")
+
+[node name="MeshInstance3D12" type="MeshInstance3D" parent="TorchV_2" unique_id=101964813]
+transform = Transform3D(0.26607615, -0.2660761, 7.015043e-10, -1.6821414e-08, -1.6448094e-08, 0.99999994, -0.26607615, -0.2660761, -6.251874e-08, 0.5, 1.982, 0.5)
+mesh = SubResource("PrismMesh_n1y4a")
+
+[node name="MeshInstance3D17" type="MeshInstance3D" parent="TorchV_2" unique_id=1659722996]
+transform = Transform3D(0.26607615, -0.2660761, 7.015043e-10, -1.6821414e-08, -1.6448094e-08, 0.99999994, -0.26607615, -0.2660761, -6.251874e-08, 0.5, 2.9819999, 0.5)
+cast_shadow = 0
+mesh = SubResource("PrismMesh_n1y4a")
+
+[node name="MeshInstance3D13" type="MeshInstance3D" parent="TorchV_2" unique_id=65705695]
+transform = Transform3D(-0.26607618, -0.26607606, -3.0908613e-08, 0, -1.644809e-08, 0.99999994, -0.26607612, 0.26607612, 3.0908616e-08, 0.5, 1.982, -0.5)
+mesh = SubResource("PrismMesh_n1y4a")
+
+[node name="MeshInstance3D16" type="MeshInstance3D" parent="TorchV_2" unique_id=926502029]
+transform = Transform3D(-0.26607618, -0.26607606, -3.0908613e-08, 0, -1.644809e-08, 0.99999994, -0.26607612, 0.26607612, 3.0908616e-08, 0.5, 2.9819999, -0.5)
+cast_shadow = 0
+mesh = SubResource("PrismMesh_n1y4a")
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="TorchV_2" unique_id=1795441868]
+transform = Transform3D(1, 0, 0, 0, 0.5, 0, 0, 0, 1, 0, 2.75, 0)
+mesh = SubResource("BoxMesh_hs836")
+
+[node name="FlameLight" type="OmniLight3D" parent="." unique_id=21607346]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3.1146038, 0)
+light_color = Color(1, 0.5647059, 0, 1)
+light_energy = 3.0
+shadow_enabled = true
+omni_range = 17.5
+omni_attenuation = 0.75
+
+[node name="FlameLight2" type="OmniLight3D" parent="." unique_id=725181860]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.6594112, 0)
+light_color = Color(0.66650903, 0.14988184, 0.044941865, 1)
+light_energy = 2.0
+shadow_enabled = true
+omni_range = 3.0
+
+[node name="TorchBody" type="StaticBody3D" parent="." unique_id=1170224603]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="TorchBody" unique_id=1232099491]
+transform = Transform3D(1.75, 0, 0, 0, 5, 0, 0, 0, 1.75, 0, 0, 0)
+shape = SubResource("BoxShape3D_li82y")
+
+[node name="SmokeParticles" type="GPUParticles3D" parent="." unique_id=180696263]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3.892019, 0)
+amount = 100
+lifetime = 6.43
+process_material = SubResource("ParticleProcessMaterial_7ufd5")
+draw_pass_1 = SubResource("BoxMesh_kg6dd")
+
+[node name="FireParticles" type="GPUParticles3D" parent="." unique_id=341262915]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0005517602, 2.8107133, -0.0029710531)
+cast_shadow = 0
+amount = 80
+amount_ratio = 0.5
+lifetime = 0.23
+process_material = SubResource("ParticleProcessMaterial_spjw2")
+draw_pass_1 = SubResource("BoxMesh_05x6m")
+
+[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="." unique_id=1987908476]
+stream = ExtResource("5_kg6dd")
+volume_db = -40.0
+autoplay = true
+max_distance = 15.0

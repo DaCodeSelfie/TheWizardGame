@@ -1,0 +1,23 @@
+[gd_scene format=3 uid="uid://ceeeotmo5exqi"]
+
+[ext_resource type="Texture2D" uid="uid://cqwf347da1rba" path="res://Sprites/MoldyBjälk.png" id="1_v5pno"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_orsyi"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_gbhat"]
+albedo_texture = ExtResource("1_v5pno")
+uv1_scale = Vector3(3, 2, 1)
+texture_filter = 0
+
+[sub_resource type="BoxMesh" id="BoxMesh_h5hs7"]
+material = SubResource("StandardMaterial3D_gbhat")
+
+[node name="MoldyBeam" type="StaticBody3D" unique_id=719188045]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1692336188]
+transform = Transform3D(0.75, 0, 0, 0, 5, 0, 0, 0, 1.5, 0, 0, 0)
+shape = SubResource("BoxShape3D_orsyi")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=2112851265]
+transform = Transform3D(0.75, 0, 0, 0, 5, 0, 0, 0, 1.5, 0, 0, 0)
+mesh = SubResource("BoxMesh_h5hs7")

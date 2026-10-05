@@ -1,0 +1,54 @@
+[gd_scene format=3 uid="uid://biovygux1rtde"]
+
+[ext_resource type="Script" uid="uid://dr1abo7m10ovj" path="res://Code/Player.cs" id="1_xhfnw"]
+[ext_resource type="Script" uid="uid://dkariugu1ndp6" path="res://Code/FireballSpell.cs" id="2_dewec"]
+[ext_resource type="PackedScene" uid="uid://dok0mqf1dyuam" path="res://Scenes/projectile.tscn" id="2_kyqiw"]
+[ext_resource type="Script" uid="uid://o6buqdqqaep8" path="res://Code/LightningSpell.cs" id="3_5ixxa"]
+[ext_resource type="Script" uid="uid://c8ddtwsr2tuga" path="res://Code/WaterSpell.cs" id="4_nn08x"]
+[ext_resource type="Script" uid="uid://cpqyevgmiy7w1" path="res://Health.cs" id="6_nn08x"]
+
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_xhfnw"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_xhfnw"]
+
+[node name="CharacterBody3D" type="CharacterBody3D" unique_id=1307986412 node_paths=PackedStringArray("Spells") groups=["player"]]
+script = ExtResource("1_xhfnw")
+Spells = [NodePath("FireballSpellNode"), NodePath("LightningSpellNode"), NodePath("WaterSpellNode")]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=891598406]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.1924126, 0)
+mesh = SubResource("CapsuleMesh_xhfnw")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1446427080]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.1924126, 0)
+shape = SubResource("CapsuleShape3D_xhfnw")
+
+[node name="Head" type="Node3D" parent="." unique_id=699339997]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.7198565, 0)
+
+[node name="Camera3D" type="Camera3D" parent="Head" unique_id=544832011]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.030886889, -0.3420639)
+far = 200.0
+
+[node name="RayCast3D" type="RayCast3D" parent="Head/Camera3D" unique_id=2126300708]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, -1, 0, 1, -4.371139e-08, 0, 0, -0.15301692)
+
+[node name="HoldPoint" type="Node3D" parent="Head/Camera3D" unique_id=1124457872]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -1.8784399)
+
+[node name="FireballSpellNode" type="Node" parent="." unique_id=1602931746]
+script = ExtResource("2_dewec")
+ProjectileScene = ExtResource("2_kyqiw")
+
+[node name="LightningSpellNode" type="Node" parent="." unique_id=613958554]
+script = ExtResource("3_5ixxa")
+ProjectileScene = ExtResource("2_kyqiw")
+
+[node name="WaterSpellNode" type="Node" parent="." unique_id=1838962594]
+script = ExtResource("4_nn08x")
+ProjectileScene = ExtResource("2_kyqiw")
+
+[node name="AudioListener3D" type="AudioListener3D" parent="." unique_id=749769966]
+
+[node name="Health" type="Node" parent="." unique_id=2130084634]
+script = ExtResource("6_nn08x")

@@ -1,0 +1,93 @@
+[gd_scene format=3 uid="uid://c4woxw1mlyed1"]
+
+[ext_resource type="Script" uid="uid://bj2q14wm5n7gw" path="res://Code/CrackedWall.cs" id="1_3kt5f"]
+[ext_resource type="Texture2D" uid="uid://npt42rbe7y1d" path="res://Sprites/RockWallCellar.png" id="1_er5xe"]
+[ext_resource type="PackedScene" uid="uid://ceeeotmo5exqi" path="res://Scenes/moldy_beam.tscn" id="2_3kt5f"]
+[ext_resource type="PackedScene" uid="uid://0ushcyc17s0r" path="res://Scenes/MoldyBeamIron.tscn" id="3_dmd7g"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_fgjl5"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_8r34y"]
+albedo_texture = ExtResource("1_er5xe")
+uv1_scale = Vector3(7, 1.3, 1)
+texture_filter = 0
+
+[sub_resource type="BoxMesh" id="BoxMesh_rytl6"]
+material = SubResource("StandardMaterial3D_8r34y")
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_3kt5f"]
+size = Vector3(1, 1.1650391, 0.6965332)
+
+[node name="CrackedWall" type="StaticBody3D" unique_id=953180017]
+script = ExtResource("1_3kt5f")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=386964298]
+transform = Transform3D(15, 0, 0, 0, 5, 0, 0, 0, 1, 0, 0, 0)
+shape = SubResource("BoxShape3D_fgjl5")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=1194258724]
+transform = Transform3D(15, 0, 0, 0, 5, 0, 0, 0, 1, 0, 0, 0)
+mesh = SubResource("BoxMesh_rytl6")
+
+[node name="Beams" type="Node3D" parent="." unique_id=1110718234]
+
+[node name="MoldyBeam7" parent="Beams" unique_id=719188045 instance=ExtResource("2_3kt5f")]
+transform = Transform3D(-4.371139e-08, 1, 0, -1, -4.371139e-08, 0, 0, 0, 1, 4.25, 2.125, 0.002)
+
+[node name="CollisionShape3D" parent="Beams/MoldyBeam7" index="0" unique_id=1692336188]
+shape = null
+
+[node name="MoldyBeam8" parent="Beams" unique_id=1227005945 instance=ExtResource("2_3kt5f")]
+transform = Transform3D(-4.371139e-08, 1, 0, -1, -4.371139e-08, 0, 0, 0, 1, 0, 2.125, 0)
+
+[node name="CollisionShape3D" parent="Beams/MoldyBeam8" index="0" unique_id=1692336188]
+shape = null
+
+[node name="MoldyBeam9" parent="Beams" unique_id=1513872420 instance=ExtResource("2_3kt5f")]
+transform = Transform3D(-4.371139e-08, 1, 0, -1, -4.371139e-08, 0, 0, 0, 1, -4.25, 2.125, 0.002)
+
+[node name="CollisionShape3D" parent="Beams/MoldyBeam9" index="0" unique_id=1692336188]
+shape = null
+
+[node name="MoldyBeam10" parent="Beams" unique_id=1084687812 instance=ExtResource("2_3kt5f")]
+transform = Transform3D(-4.371139e-08, 1, 0, -1, -4.371139e-08, 0, 0, 0, 1, 4.25, -2.125, 0.002)
+
+[node name="CollisionShape3D" parent="Beams/MoldyBeam10" index="0" unique_id=1692336188]
+shape = null
+
+[node name="MoldyBeam11" parent="Beams" unique_id=1583442319 instance=ExtResource("2_3kt5f")]
+transform = Transform3D(-4.371139e-08, 1, 0, -1, -4.371139e-08, 0, 0, 0, 1, 0, -2.125, 0)
+
+[node name="CollisionShape3D" parent="Beams/MoldyBeam11" index="0" unique_id=1692336188]
+shape = null
+
+[node name="MoldyBeam12" parent="Beams" unique_id=721121123 instance=ExtResource("2_3kt5f")]
+transform = Transform3D(-4.371139e-08, 1, 0, -1, -4.371139e-08, 0, 0, 0, 1, -4.25, -2.125, 0.002)
+
+[node name="CollisionShape3D" parent="Beams/MoldyBeam12" index="0" unique_id=1692336188]
+shape = null
+
+[node name="Beam" parent="Beams" unique_id=1739259830 instance=ExtResource("3_dmd7g")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.5, 0, 0)
+
+[node name="Beam2" parent="Beams" unique_id=574604923 instance=ExtResource("3_dmd7g")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.5, 0, 0)
+
+[node name="InteractArea" type="Area3D" parent="." unique_id=730177497]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="InteractArea" unique_id=83718491]
+transform = Transform3D(16.5, 0, 0, 0, 5, 0, 0, 0, 4, 0, -0.41259766, 2.0930665)
+shape = SubResource("BoxShape3D_3kt5f")
+
+[node name="TNTAttachpoint" type="Node3D" parent="." unique_id=1606771185]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.7, 2)
+
+[connection signal="body_entered" from="InteractArea" to="." method="OnInteractAreaBodyEntered"]
+[connection signal="body_exited" from="InteractArea" to="." method="OnInteractAreaBodyExited"]
+
+[editable path="Beams/MoldyBeam7"]
+[editable path="Beams/MoldyBeam8"]
+[editable path="Beams/MoldyBeam9"]
+[editable path="Beams/MoldyBeam10"]
+[editable path="Beams/MoldyBeam11"]
+[editable path="Beams/MoldyBeam12"]

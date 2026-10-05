@@ -1,0 +1,39 @@
+[gd_scene format=3 uid="uid://shfhsjvqg4ls"]
+
+[ext_resource type="Script" uid="uid://dhcdl6xjwculo" path="res://Code/CarriableItem.cs" id="1_bevdn"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_6riw4"]
+albedo_color = Color(0.55, 0, 0, 1)
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_itwul"]
+material = SubResource("StandardMaterial3D_6riw4")
+
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_6riw4"]
+
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_itwul"]
+height = 3.3530273
+radius = 3.0688477
+
+[node name="GasolineCanister" type="RigidBody3D" unique_id=1225675770]
+mass = 0.2
+script = ExtResource("1_bevdn")
+ItemId = "GasolineCanister"
+HoldDistance = 2.675
+ThrowForce = 44.52
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=1176714844]
+transform = Transform3D(1, 0, 0, 0, 0.545, 0, 0, 0, 1, 0, 0, 0)
+mesh = SubResource("CylinderMesh_itwul")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1035383670]
+transform = Transform3D(1, 0, 0, 0, 0.545, 0, 0, 0, 1, 0, 0, 0)
+shape = SubResource("CylinderShape3D_6riw4")
+
+[node name="Area3D" type="Area3D" parent="." unique_id=2084851141]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D" unique_id=1429952560]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.0614872, 0)
+shape = SubResource("CylinderShape3D_itwul")
+
+[connection signal="body_entered" from="Area3D" to="." method="OnInteractAreaBodyEntered"]
+[connection signal="body_exited" from="Area3D" to="." method="OnInteractAreaBodyExited"]

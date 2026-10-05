@@ -1,0 +1,74 @@
+[gd_scene format=3 uid="uid://bjiji2d4nbe04"]
+
+[ext_resource type="Texture2D" uid="uid://npt42rbe7y1d" path="res://Sprites/RockWallCellar.png" id="1_2p0br"]
+[ext_resource type="PackedScene" uid="uid://ceeeotmo5exqi" path="res://Scenes/moldy_beam.tscn" id="2_8r34y"]
+[ext_resource type="PackedScene" uid="uid://0ushcyc17s0r" path="res://Scenes/MoldyBeamIron.tscn" id="3_7c0fp"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_fgjl5"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_8r34y"]
+albedo_texture = ExtResource("1_2p0br")
+uv1_scale = Vector3(7, 1.3, 1)
+texture_filter = 0
+
+[sub_resource type="BoxMesh" id="BoxMesh_rytl6"]
+material = SubResource("StandardMaterial3D_8r34y")
+
+[node name="Wall" type="StaticBody3D" unique_id=953180017]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=386964298]
+transform = Transform3D(15, 0, 0, 0, 5, 0, 0, 0, 1, 0, 0, 0)
+shape = SubResource("BoxShape3D_fgjl5")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=1194258724]
+transform = Transform3D(15, 0, 0, 0, 5, 0, 0, 0, 1, 0, 0, 0)
+mesh = SubResource("BoxMesh_rytl6")
+
+[node name="MoldyBeam7" parent="." unique_id=719188045 instance=ExtResource("2_8r34y")]
+transform = Transform3D(-4.371139e-08, 1, 0, -1, -4.371139e-08, 0, 0, 0, 1, 4.25, 2.125, 0.002)
+
+[node name="CollisionShape3D" parent="MoldyBeam7" index="0" unique_id=1692336188]
+shape = null
+
+[node name="MoldyBeam8" parent="." unique_id=1227005945 instance=ExtResource("2_8r34y")]
+transform = Transform3D(-4.371139e-08, 1, 0, -1, -4.371139e-08, 0, 0, 0, 1, 0, 2.125, 0)
+
+[node name="CollisionShape3D" parent="MoldyBeam8" index="0" unique_id=1692336188]
+shape = null
+
+[node name="MoldyBeam9" parent="." unique_id=1513872420 instance=ExtResource("2_8r34y")]
+transform = Transform3D(-4.371139e-08, 1, 0, -1, -4.371139e-08, 0, 0, 0, 1, -4.25, 2.125, 0.002)
+
+[node name="CollisionShape3D" parent="MoldyBeam9" index="0" unique_id=1692336188]
+shape = null
+
+[node name="MoldyBeam10" parent="." unique_id=1084687812 instance=ExtResource("2_8r34y")]
+transform = Transform3D(-4.371139e-08, 1, 0, -1, -4.371139e-08, 0, 0, 0, 1, 4.25, -2.125, 0.002)
+
+[node name="CollisionShape3D" parent="MoldyBeam10" index="0" unique_id=1692336188]
+shape = null
+
+[node name="MoldyBeam11" parent="." unique_id=1583442319 instance=ExtResource("2_8r34y")]
+transform = Transform3D(-4.371139e-08, 1, 0, -1, -4.371139e-08, 0, 0, 0, 1, 0, -2.125, 0)
+
+[node name="CollisionShape3D" parent="MoldyBeam11" index="0" unique_id=1692336188]
+shape = null
+
+[node name="MoldyBeam12" parent="." unique_id=721121123 instance=ExtResource("2_8r34y")]
+transform = Transform3D(-4.371139e-08, 1, 0, -1, -4.371139e-08, 0, 0, 0, 1, -4.25, -2.125, 0.002)
+
+[node name="CollisionShape3D" parent="MoldyBeam12" index="0" unique_id=1692336188]
+shape = null
+
+[node name="Beam" parent="." unique_id=1739259830 instance=ExtResource("3_7c0fp")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.5, 0, 0)
+
+[node name="Beam2" parent="." unique_id=574604923 instance=ExtResource("3_7c0fp")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.5, 0, 0)
+
+[editable path="MoldyBeam7"]
+[editable path="MoldyBeam8"]
+[editable path="MoldyBeam9"]
+[editable path="MoldyBeam10"]
+[editable path="MoldyBeam11"]
+[editable path="MoldyBeam12"]

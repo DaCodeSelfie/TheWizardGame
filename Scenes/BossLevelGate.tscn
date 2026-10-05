@@ -1,0 +1,67 @@
+[gd_scene format=3 uid="uid://qvnc4w8j7xvk"]
+
+[ext_resource type="Script" uid="uid://bkxl6iwwgxgp2" path="res://Code/BossGate.cs" id="1_1u03n"]
+[ext_resource type="Script" uid="uid://bn4onqbxwt8fb" path="res://Code/GateTrigger.cs" id="2_sxofw"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_wx854"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_bsu1e"]
+albedo_color = Color(0.47788018, 0.47788012, 0.47788012, 1)
+metallic = 1.0
+metallic_specular = 1.0
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_finkt"]
+material = SubResource("StandardMaterial3D_bsu1e")
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_1u03n"]
+size = Vector3(6, 6, 8)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_sxofw"]
+size = Vector3(6, 6, 8)
+
+[node name="BossLevelGate" type="StaticBody3D" unique_id=982414892]
+script = ExtResource("1_1u03n")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1144330438]
+transform = Transform3D(6, 0, 0, 0, 5, 0, 0, 0, 0.5, 0, 0, 0)
+shape = SubResource("BoxShape3D_wx854")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=751515741]
+transform = Transform3D(0.25, 0, 0, 0, 2.5, 0, 0, 0, 0.25, 0, 0, 0)
+mesh = SubResource("CylinderMesh_finkt")
+
+[node name="MeshInstance3D5" type="MeshInstance3D" parent="." unique_id=937848830]
+transform = Transform3D(0.25, 0, 0, 0, 2.5, 0, 0, 0, 0.25, -1.25, 0, 0)
+mesh = SubResource("CylinderMesh_finkt")
+
+[node name="MeshInstance3D4" type="MeshInstance3D" parent="." unique_id=525033974]
+transform = Transform3D(0.25, 0, 0, 0, 2.5, 0, 0, 0, 0.25, 1.25, 0, 0)
+mesh = SubResource("CylinderMesh_finkt")
+
+[node name="MeshInstance3D3" type="MeshInstance3D" parent="." unique_id=1026966699]
+transform = Transform3D(0.25, 0, 0, 0, 2.5, 0, 0, 0, 0.25, -2.5, 0, 0)
+mesh = SubResource("CylinderMesh_finkt")
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="." unique_id=199781053]
+transform = Transform3D(0.25, 0, 0, 0, 2.5, 0, 0, 0, 0.25, 2.5, 0, 0)
+mesh = SubResource("CylinderMesh_finkt")
+
+[node name="ApproachTrigger" type="Area3D" parent="." unique_id=1489344612 node_paths=PackedStringArray("LinkedGate")]
+script = ExtResource("2_sxofw")
+LinkedGate = NodePath("..")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="ApproachTrigger" unique_id=1570649989]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.5, -5.5)
+shape = SubResource("BoxShape3D_1u03n")
+
+[node name="SealTrigger" type="Area3D" parent="." unique_id=1994077746 node_paths=PackedStringArray("LinkedGate")]
+script = ExtResource("2_sxofw")
+LinkedGate = NodePath("..")
+Action = 1
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="SealTrigger" unique_id=1987019785]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.5, 5.5)
+shape = SubResource("BoxShape3D_sxofw")
+
+[connection signal="body_entered" from="ApproachTrigger" to="ApproachTrigger" method="OnBodyEntered"]
+[connection signal="body_entered" from="SealTrigger" to="SealTrigger" method="OnBodyEntered"]
