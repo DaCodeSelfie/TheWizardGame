@@ -5,7 +5,7 @@
 [ext_resource type="PackedScene" uid="uid://dok0mqf1dyuam" path="res://Scenes/projectile.tscn" id="2_kyqiw"]
 [ext_resource type="Script" uid="uid://o6buqdqqaep8" path="res://Code/LightningSpell.cs" id="3_5ixxa"]
 [ext_resource type="Script" uid="uid://c8ddtwsr2tuga" path="res://Code/WaterSpell.cs" id="4_nn08x"]
-[ext_resource type="Script" uid="uid://cpqyevgmiy7w1" path="res://Health.cs" id="6_nn08x"]
+[ext_resource type="Script" uid="uid://cpqyevgmiy7w1" path="res://Code/Health.cs" id="6_nn08x"]
 
 [sub_resource type="CapsuleMesh" id="CapsuleMesh_xhfnw"]
 

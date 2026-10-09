@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://qthr3wxgiw01"]
 
-[ext_resource type="PackedScene" uid="uid://bqx7t3dcxxs5x" path="res://Sprites/BlueBookCroco.gltf" id="1_h0sf5"]
+[ext_resource type="PackedScene" uid="uid://bqx7t3dcxxs5x" path="res://Sprites/3DObjects/BlueBookCroco.gltf" id="1_h0sf5"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_tib85"]
 

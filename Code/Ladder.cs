@@ -44,7 +44,7 @@ public partial class Ladder : Node3D
 		// physics frame, in case something (like Autoplay) overrides the _Ready() Seek.
 		if (!_hasInitialized)
 		{
-			_animPlayer.Seek(0.0, true);
+				_animPlayer.Seek(0.0, true);
 			_hasInitialized = true;
 			//GD.Print("Forced ladder pose to frame 0 on first physics frame.");
 		}

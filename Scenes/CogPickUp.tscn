@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://dc8qadfo16kly"]
 
-[ext_resource type="Material" uid="uid://qcy4tifpwikp" path="res://Sprites/CopperMetal.tres" id="1_vxky5"]
+[ext_resource type="Material" uid="uid://qcy4tifpwikp" path="res://Sprites/2DArt/CopperMetal.tres" id="1_vxky5"]
 [ext_resource type="Script" uid="uid://dhcdl6xjwculo" path="res://Code/CarriableItem.cs" id="1_xdpxj"]
 
 [sub_resource type="CylinderMesh" id="CylinderMesh_1imq7"]

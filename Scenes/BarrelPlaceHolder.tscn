@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://t3w18100xemq"]
 
-[ext_resource type="PackedScene" uid="uid://b4d5uvy1mqlph" path="res://Sprites/Barrel.gltf" id="1_bah7q"]
+[ext_resource type="PackedScene" uid="uid://b4d5uvy1mqlph" path="res://Sprites/3DObjects/Barrel.gltf" id="1_bah7q"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_5ws4p"]
 

@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://e4r6ejng0675"]
 
 [ext_resource type="Shader" uid="uid://cw25hxg8m1lhm" path="res://Shaders/WaterSprite.gdshader" id="1_5v6ty"]
-[ext_resource type="Texture2D" uid="uid://r5bqwfylerr8" path="res://Sprites/WaterSprite.png" id="2_aq4x0"]
+[ext_resource type="Texture2D" uid="uid://r5bqwfylerr8" path="res://Sprites/2DArt/WaterSprite.png" id="2_aq4x0"]
 [ext_resource type="AudioStream" uid="uid://cpqx5304pq2y3" path="res://MusicAndSoundEffects/soul_serenity_sounds-water-noises-241049.mp3" id="3_hjwib"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_hjwib"]

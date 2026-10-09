@@ -1,8 +1,8 @@
 [gd_scene format=3 uid="uid://cagfmgip6u0si"]
 
 [ext_resource type="Script" uid="uid://dj74ef34nuux5" path="res://Code/Lever.cs" id="1_0so5j"]
-[ext_resource type="Texture2D" uid="uid://3n4xsyuwcuav" path="res://Sprites/WoodFloor.png" id="2_eno02"]
-[ext_resource type="Material" uid="uid://c2702vcr80w08" path="res://Sprites/Metal.tres" id="3_vybex"]
+[ext_resource type="Texture2D" uid="uid://3n4xsyuwcuav" path="res://Sprites/2DArt/WoodFloor.png" id="2_eno02"]
+[ext_resource type="Material" uid="uid://c2702vcr80w08" path="res://Sprites/2DArt/Metal.tres" id="3_vybex"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_mhniu"]
 albedo_color = Color(0.61745477, 0.61745477, 0.6174547, 1)

@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://c4woxw1mlyed1"]
 
 [ext_resource type="Script" uid="uid://bj2q14wm5n7gw" path="res://Code/CrackedWall.cs" id="1_3kt5f"]
-[ext_resource type="Texture2D" uid="uid://npt42rbe7y1d" path="res://Sprites/RockWallCellar.png" id="1_er5xe"]
+[ext_resource type="Texture2D" uid="uid://npt42rbe7y1d" path="res://Sprites/2DArt/RockWallCellar.png" id="1_er5xe"]
 [ext_resource type="PackedScene" uid="uid://ceeeotmo5exqi" path="res://Scenes/moldy_beam.tscn" id="2_3kt5f"]
 [ext_resource type="PackedScene" uid="uid://0ushcyc17s0r" path="res://Scenes/MoldyBeamIron.tscn" id="3_dmd7g"]
 

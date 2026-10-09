@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://bqkbrjf158smu"]
 
 [ext_resource type="Script" uid="uid://cshc4octlfl8q" path="res://Code/Gate.cs" id="1_lc4j7"]
+[ext_resource type="PackedScene" uid="uid://bqb6cpd1eq6uq" path="res://Sprites/3DObjects/BarMetal.gltf" id="2_i87f2"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_ms737"]
 
@@ -21,20 +22,40 @@ shape = SubResource("BoxShape3D_ms737")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=1122270167]
 transform = Transform3D(0.25, 0, 0, 0, 2.5, 0, 0, 0, 0.25, 0, 0, 0)
+visible = false
 mesh = SubResource("CylinderMesh_b50w5")
 
 [node name="MeshInstance3D5" type="MeshInstance3D" parent="." unique_id=1060085439]
 transform = Transform3D(0.25, 0, 0, 0, 2.5, 0, 0, 0, 0.25, -1.25, 0, 0)
+visible = false
 mesh = SubResource("CylinderMesh_b50w5")
 
 [node name="MeshInstance3D4" type="MeshInstance3D" parent="." unique_id=807713824]
 transform = Transform3D(0.25, 0, 0, 0, 2.5, 0, 0, 0, 0.25, 1.25, 0, 0)
+visible = false
 mesh = SubResource("CylinderMesh_b50w5")
 
 [node name="MeshInstance3D3" type="MeshInstance3D" parent="." unique_id=1305010738]
 transform = Transform3D(0.25, 0, 0, 0, 2.5, 0, 0, 0, 0.25, -2.5, 0, 0)
+visible = false
 mesh = SubResource("CylinderMesh_b50w5")
 
 [node name="MeshInstance3D2" type="MeshInstance3D" parent="." unique_id=1477317043]
 transform = Transform3D(0.25, 0, 0, 0, 2.5, 0, 0, 0, 0.25, 2.5, 0, 0)
+visible = false
 mesh = SubResource("CylinderMesh_b50w5")
+
+[node name="default2" parent="." unique_id=1422015784 instance=ExtResource("2_i87f2")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.375, -2.5, -0.125)
+
+[node name="default4" parent="." unique_id=1314238443 instance=ExtResource("2_i87f2")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.6248355, -2.5, -0.125)
+
+[node name="default3" parent="." unique_id=1878277307 instance=ExtResource("2_i87f2")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.125, -2.5, -0.125)
+
+[node name="default5" parent="." unique_id=1077137766 instance=ExtResource("2_i87f2")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.125, -2.5, -0.125)
+
+[node name="default6" parent="." unique_id=353928484 instance=ExtResource("2_i87f2")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.375, -2.5, -0.125)

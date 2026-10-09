@@ -1,16 +1,8 @@
 [gd_scene format=3 uid="uid://cjqf38pakltjn"]
 
-[ext_resource type="Texture2D" uid="uid://b413cmaocks3v" path="res://Sprites/MudFloor.png" id="1_mdfcv"]
+[ext_resource type="PackedScene" uid="uid://b6aty63dhhp48" path="res://Sprites/3DObjects/NewFloor3D.gltf" id="1_wlly8"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_gcf05"]
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_r3gj5"]
-albedo_texture = ExtResource("1_mdfcv")
-uv1_scale = Vector3(3, 3, 3)
-texture_filter = 0
-
-[sub_resource type="BoxMesh" id="BoxMesh_rftlp"]
-material = SubResource("StandardMaterial3D_r3gj5")
 
 [node name="CellarFloor" type="StaticBody3D" unique_id=417578301]
 
@@ -18,6 +10,5 @@ material = SubResource("StandardMaterial3D_r3gj5")
 transform = Transform3D(15, 0, 0, 0, 0.1, 0, 0, 0, 15, 0, 0, 0)
 shape = SubResource("BoxShape3D_gcf05")
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=129594521]
-transform = Transform3D(15, 0, 0, 0, 0.1, 0, 0, 0, 15, 0, 0, 0)
-mesh = SubResource("BoxMesh_rftlp")
+[node name="default2" parent="." unique_id=1320622746 instance=ExtResource("1_wlly8")]
+transform = Transform3D(1, 0, 0, 0, 0.1, 0, 0, 0, 1, -7.5, -0.05, -7.5)

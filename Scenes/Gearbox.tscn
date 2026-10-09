@@ -1,12 +1,13 @@
 [gd_scene format=3 uid="uid://p7u2p1n0jp3e"]
 
 [ext_resource type="Script" uid="uid://b8h3uafusw7y2" path="res://Code/Gearbox.cs" id="1_7i1qg"]
-[ext_resource type="Texture2D" uid="uid://3n4xsyuwcuav" path="res://Sprites/WoodFloor.png" id="2_dj6ce"]
-[ext_resource type="Material" uid="uid://qcy4tifpwikp" path="res://Sprites/CopperMetal.tres" id="3_dxx7a"]
+[ext_resource type="Texture2D" uid="uid://3n4xsyuwcuav" path="res://Sprites/2DArt/WoodFloor.png" id="2_dj6ce"]
+[ext_resource type="Material" uid="uid://qcy4tifpwikp" path="res://Sprites/2DArt/CopperMetal.tres" id="3_dxx7a"]
 [ext_resource type="Script" uid="uid://ddfmaov1fauwy" path="res://Code/SparkLight.cs" id="4_dj6ce"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_qrgu4"]
 albedo_texture = ExtResource("2_dj6ce")
+uv1_scale = Vector3(1, 0.625, 0.5)
 texture_filter = 0
 
 [sub_resource type="BoxMesh" id="BoxMesh_7pui8"]
@@ -31,7 +32,7 @@ material = SubResource("StandardMaterial3D_uo7s5")
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_dj6ce"]
 albedo_color = Color(0.40832946, 0.40832946, 0.40832946, 1)
 albedo_texture = ExtResource("2_dj6ce")
-uv1_scale = Vector3(1.92, 1.92, 1.92)
+uv1_scale = Vector3(0.3, 0.4, 2)
 texture_filter = 0
 
 [sub_resource type="BoxMesh" id="BoxMesh_4iplr"]

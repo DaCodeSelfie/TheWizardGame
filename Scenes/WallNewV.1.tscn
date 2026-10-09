@@ -1,0 +1,11 @@
+[gd_scene format=3 uid="uid://cbs7knnhwv8fv"]
+
+[ext_resource type="PackedScene" uid="uid://c1ugyeghhhp7g" path="res://Sprites/3DObjects/WallNewRim.gltf" id="1_5ts2j"]
+[ext_resource type="PackedScene" uid="uid://dyrs1tk6u2ggb" path="res://Sprites/3DObjects/WallNewWall.gltf" id="2_8tp11"]
+
+[node name="Node3D" type="Node3D" unique_id=310829085]
+
+[node name="default2" parent="." unique_id=997338952 instance=ExtResource("1_5ts2j")]
+
+[node name="default3" parent="." unique_id=1161790312 instance=ExtResource("2_8tp11")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 0.5, 0, -3.5, 0.75)

@@ -1,16 +1,8 @@
 [gd_scene format=3 uid="uid://0ushcyc17s0r"]
 
-[ext_resource type="Texture2D" uid="uid://dugjqvqa075sk" path="res://Sprites/MoldyBjälkIron.png" id="1_f22xp"]
+[ext_resource type="PackedScene" uid="uid://c3jhvjxlsbe66" path="res://Sprites/3DObjects/Beam1.5x5x1.5.gltf" id="1_sn3ns"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_b76qd"]
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_7uw3i"]
-albedo_texture = ExtResource("1_f22xp")
-uv1_scale = Vector3(3, 2, 1)
-texture_filter = 0
-
-[sub_resource type="BoxMesh" id="BoxMesh_lhbyl"]
-material = SubResource("StandardMaterial3D_7uw3i")
 
 [node name="Beam" type="StaticBody3D" unique_id=1739259830]
 
@@ -18,6 +10,5 @@ material = SubResource("StandardMaterial3D_7uw3i")
 transform = Transform3D(1.5, 0, 0, 0, 5, 0, 0, 0, 1.5, 0, 0, 0)
 shape = SubResource("BoxShape3D_b76qd")
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=1380709587]
-transform = Transform3D(1.5, 0, 0, 0, 5, 0, 0, 0, 1.5, 0, 0, 0)
-mesh = SubResource("BoxMesh_lhbyl")
+[node name="default2" parent="." unique_id=1191514962 instance=ExtResource("1_sn3ns")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.75, -2.5, -0.25)

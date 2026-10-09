@@ -40,6 +40,9 @@ public partial class Player : CharacterBody3D
 
 	public override void _Ready()
 	{
+		GD.Print("PLAYER START ROTATION: ", Rotation);
+		GD.Print("PLAYER START GLOBAL ROTATION: ", GlobalRotation);
+
 		_head = GetNode<Node3D>("Head");
 		_camera = GetNode<Camera3D>("Head/Camera3D");
 		Input.MouseMode = Input.MouseModeEnum.Captured;
@@ -108,6 +111,7 @@ public partial class Player : CharacterBody3D
 
 	private void ShootOnce()
 	{
+		GD.Print("=== SHOOOOOOOT ===");
 		if (Spells.Count == 0) return;
 		if (_cooldownTimer > 0.0f) return;
 

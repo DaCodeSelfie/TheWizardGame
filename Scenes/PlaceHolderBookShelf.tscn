@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://c0xj5egf64bhc"]
 
-[ext_resource type="PackedScene" uid="uid://ct4uvsby855i3" path="res://Sprites/ShelfCroco.gltf" id="1_reibi"]
+[ext_resource type="PackedScene" uid="uid://ct4uvsby855i3" path="res://Sprites/3DObjects/ShelfCroco.gltf" id="1_reibi"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_5ev4d"]
 

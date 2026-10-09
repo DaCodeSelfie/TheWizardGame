@@ -12,8 +12,8 @@ config_version=5
 
 config/name="ImAFookinWizoord"
 run/main_scene="uid://dodb5f0unkskg"
-config/features=PackedStringArray("4.6", "C#", "Forward Plus")
-config/icon="res://icon.svg"
+config/features=PackedStringArray("4.7", "C#", "Forward Plus")
+config/icon="res://Sprites/2DArt/icon.svg"
 
 [dotnet]
 

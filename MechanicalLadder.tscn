@@ -1,0 +1,335 @@
+[gd_scene format=3 uid="uid://dwswajcyh6p4o"]
+
+[ext_resource type="PackedScene" uid="uid://cohbld4h1ibnp" path="res://Sprites/3DObjects/NewLadder.gltf" id="1_pwkok"]
+[ext_resource type="Script" uid="uid://bgsr4p2c02vky" path="res://Code/Ladder.cs" id="2_jui2r"]
+[ext_resource type="Material" uid="uid://qcy4tifpwikp" path="res://Sprites/2DArt/CopperMetal.tres" id="3_44p0g"]
+[ext_resource type="PackedScene" uid="uid://duahdacjluwkc" path="res://MetalBoxNew.gltf" id="4_jui2r"]
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_jui2r"]
+material = ExtResource("3_44p0g")
+
+[sub_resource type="BoxMesh" id="BoxMesh_llxbw"]
+material = ExtResource("3_44p0g")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_uo7s5"]
+albedo_color = Color(0.30323282, 0.30323285, 0.30323276, 1)
+metallic = 0.59
+metallic_specular = 1.0
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_2md8h"]
+material = SubResource("StandardMaterial3D_uo7s5")
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_3ny47"]
+size = Vector3(1.5, 0.25054932, 1.499649)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_44p0g"]
+size = Vector3(0.26123047, 0.18353271, 0.17890167)
+
+[sub_resource type="Gradient" id="Gradient_44p0g"]
+colors = PackedColorArray(0.23392546, 0.23392546, 0.23392543, 1, 0.40069774, 0.40069774, 0.40069768, 0)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_4iplr"]
+gradient = SubResource("Gradient_44p0g")
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_jui2r"]
+lifetime_randomness = 0.15
+emission_shape_scale = Vector3(0.3, 0.725, 1)
+emission_shape = 1
+emission_sphere_radius = 2.21
+angle_min = 1.0728835e-05
+angle_max = 1.0728835e-05
+inherit_velocity_ratio = 0.115
+initial_velocity_min = 0.5
+initial_velocity_max = 1.5
+gravity = Vector3(0, 3.185, 0)
+scale_min = 0.29999998
+scale_max = 0.5
+color = Color(0.53333336, 0.53333336, 0.53333336, 1)
+color_ramp = SubResource("GradientTexture1D_4iplr")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_4njbo"]
+transparency = 1
+vertex_color_use_as_albedo = true
+
+[sub_resource type="BoxMesh" id="BoxMesh_2md8h"]
+material = SubResource("StandardMaterial3D_4njbo")
+size = Vector3(0.3, 0.3, 0.3)
+
+[sub_resource type="Animation" id="Animation_jui2r"]
+resource_name = "LadderAnim"
+tracks/0/type = "position_3d"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("LadderP2Move")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = PackedFloat32Array(0, 1, 0, 0.26, 0, 1, 1, 0, 0.26, 1.3438231)
+tracks/1/type = "position_3d"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("AnimatableBody3D/LadderPart2Col")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = PackedFloat32Array(0, 1, 0.755, 0.38542098, 0.75, 1, 1, 0.755, 0.38542098, 2.0939267)
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("BigGear2:rotation")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector3(0, 0, 0), Vector3(3.1415927, 0, 0)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("BigGear:rotation")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector3(0, 0, 0), Vector3(-3.1415927, 0, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_llxbw"]
+length = 0.001
+tracks/0/type = "position_3d"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("LadderP2Move")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = PackedFloat32Array(0, 1, 0, 0.26, 0)
+tracks/1/type = "position_3d"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("AnimatableBody3D/LadderPart2Col")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = PackedFloat32Array(0, 1, 0.755, 0.38542098, 0.75)
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("BigGear2:rotation")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0, 0, 0)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("BigGear:rotation")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0, 0, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_2md8h"]
+_data = {
+&"LadderAnim": SubResource("Animation_jui2r"),
+&"RESET": SubResource("Animation_llxbw")
+}
+
+[node name="MechanicalLadder" type="Node3D" unique_id=1766523461]
+script = ExtResource("2_jui2r")
+
+[node name="default2" parent="." unique_id=210810109 instance=ExtResource("1_pwkok")]
+
+[node name="LadderP2Move" parent="." unique_id=1677584854 instance=ExtResource("1_pwkok")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.26, 0)
+
+[node name="BigGear" type="Node3D" parent="." unique_id=1724632043]
+transform = Transform3D(0.29999998, 0, 0, 0, 0.3, 0, 0, 0, 0.3, 1.6286176, 0.32168734, 0.14930952)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="BigGear" unique_id=2064185687]
+transform = Transform3D(-4.3711385e-08, -0.099999964, 0, 0.9999999, -4.3711372e-09, 0, 0, 0, 0.99999994, 0.6423898, 0, 0)
+mesh = SubResource("CylinderMesh_jui2r")
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="BigGear" unique_id=751287548]
+transform = Transform3D(0.37, 0, 0, 0, 0.55, 0, 0, 0, 0.15, 0.611, 0, 0.45)
+mesh = SubResource("BoxMesh_llxbw")
+
+[node name="MeshInstance3D3" type="MeshInstance3D" parent="BigGear" unique_id=1250950882]
+transform = Transform3D(0.37, 0, 0, 0, 0.55, 0, 0, 0, 0.15, 0.611, 0, -0.45)
+mesh = SubResource("BoxMesh_llxbw")
+
+[node name="MeshInstance3D11" type="MeshInstance3D" parent="BigGear" unique_id=183417687]
+transform = Transform3D(0.37, 0, 0, 0, -6.5567085e-09, 0.15, 0, -0.15, -6.5567085e-09, 0.612, 0, -0.6)
+mesh = SubResource("BoxMesh_llxbw")
+
+[node name="MeshInstance3D12" type="MeshInstance3D" parent="BigGear" unique_id=1081928288]
+transform = Transform3D(0.37, 0, 0, 0, -6.5567085e-09, 0.15, 0, -0.15, -6.5567085e-09, 0.612, 0, 0.6)
+mesh = SubResource("BoxMesh_llxbw")
+
+[node name="MeshInstance3D15" type="MeshInstance3D" parent="BigGear" unique_id=2073810976]
+transform = Transform3D(0.37, 0, 0, 0, 0.10606602, 0.10606603, 0, -0.10606603, 0.10606602, 0.612, 0.45, -0.45)
+mesh = SubResource("BoxMesh_llxbw")
+
+[node name="MeshInstance3D16" type="MeshInstance3D" parent="BigGear" unique_id=1213640556]
+transform = Transform3D(0.37, 0, 0, 0, 0.10606602, 0.10606603, 0, -0.10606603, 0.10606602, 0.612, -0.45, 0.45)
+mesh = SubResource("BoxMesh_llxbw")
+
+[node name="MeshInstance3D17" type="MeshInstance3D" parent="BigGear" unique_id=1244124131]
+transform = Transform3D(0.37, 0, 0, 0, 0.10606602, 0.10606603, 0, -0.10606603, 0.10606602, 0.612, 0.45, 0.45)
+mesh = SubResource("BoxMesh_llxbw")
+
+[node name="MeshInstance3D18" type="MeshInstance3D" parent="BigGear" unique_id=1020265799]
+transform = Transform3D(0.37, 0, 0, 0, 0.10606602, 0.10606603, 0, -0.10606603, 0.10606602, 0.612, -0.45, -0.45)
+mesh = SubResource("BoxMesh_llxbw")
+
+[node name="MeshInstance3D13" type="MeshInstance3D" parent="BigGear" unique_id=366637104]
+transform = Transform3D(0.37, 0, 0, 0, -0.15000002, -1.3113418e-08, 0, 1.3113418e-08, -0.15000002, 0.612, -0.6, 0)
+mesh = SubResource("BoxMesh_llxbw")
+
+[node name="MeshInstance3D14" type="MeshInstance3D" parent="BigGear" unique_id=2027262286]
+transform = Transform3D(0.37, 0, 0, 0, -0.15000002, -1.3113418e-08, 0, 1.3113418e-08, -0.15000002, 0.612, 0.6, 0)
+mesh = SubResource("BoxMesh_llxbw")
+
+[node name="MeshInstance3D4" type="MeshInstance3D" parent="BigGear" unique_id=1831373723]
+transform = Transform3D(0.37, 0, 0, 0, -2.4041263e-08, -0.15, 0, 0.55, -6.5567085e-09, 0.611, 0.45, 0)
+mesh = SubResource("BoxMesh_llxbw")
+
+[node name="MeshInstance3D5" type="MeshInstance3D" parent="BigGear" unique_id=1710407995]
+transform = Transform3D(0.37, 0, 0, 0, -2.4041263e-08, -0.15, 0, 0.55, -6.5567085e-09, 0.611, -0.45, 0)
+mesh = SubResource("BoxMesh_llxbw")
+
+[node name="MeshInstance3D6" type="MeshInstance3D" parent="BigGear" unique_id=1463440584]
+transform = Transform3D(0.37, 0, 0, 0, 0.24748737, -0.10606602, 0, 0.24748737, 0.10606602, 0.612, -0.35, 0.35)
+mesh = SubResource("BoxMesh_llxbw")
+
+[node name="MeshInstance3D7" type="MeshInstance3D" parent="BigGear" unique_id=686422642]
+transform = Transform3D(0.37, 0, 0, 0, 0.24748737, -0.10606602, 0, 0.24748737, 0.10606602, 0.612, 0.35, -0.35)
+mesh = SubResource("BoxMesh_llxbw")
+
+[node name="MeshInstance3D8" type="MeshInstance3D" parent="BigGear" unique_id=236014110]
+transform = Transform3D(0.37, 0, 0, 0, 0.24748737, 0.10606602, 0, -0.24748737, 0.10606602, 0.612, 0.35, 0.35)
+mesh = SubResource("BoxMesh_llxbw")
+
+[node name="MeshInstance3D9" type="MeshInstance3D" parent="BigGear" unique_id=1846802480]
+transform = Transform3D(0.37, 0, 0, 0, 0.24748737, 0.10606602, 0, -0.24748737, 0.10606602, 0.612, -0.35, -0.35)
+mesh = SubResource("BoxMesh_llxbw")
+
+[node name="MeshInstance3D10" type="MeshInstance3D" parent="BigGear" unique_id=2138108179]
+transform = Transform3D(-1.0927845e-08, 0.063, 4.440892e-16, -0.067200504, -7.402317e-10, 0.24079886, 0.24079886, 2.652464e-09, 0.067200504, 0.706, 0, 0)
+mesh = SubResource("CylinderMesh_2md8h")
+
+[node name="BigGear2" type="Node3D" parent="." unique_id=881392832]
+transform = Transform3D(0.29999998, 0, 0, 0, 0.29999998, 0, 0, 0, 0.29999998, 1.6286176, 0.23800567, 0.51899123)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="BigGear2" unique_id=1538001183]
+transform = Transform3D(-4.3711385e-08, -0.099999964, 0, 0.9999999, -4.3711372e-09, 0, 0, 0, 0.99999994, 0.6423898, 0, 0)
+mesh = SubResource("CylinderMesh_jui2r")
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="BigGear2" unique_id=926208668]
+transform = Transform3D(0.37, 0, 0, 0, 0.55, 0, 0, 0, 0.15, 0.611, 0, 0.45)
+mesh = SubResource("BoxMesh_llxbw")
+
+[node name="MeshInstance3D3" type="MeshInstance3D" parent="BigGear2" unique_id=922475598]
+transform = Transform3D(0.37, 0, 0, 0, 0.55, 0, 0, 0, 0.15, 0.611, 0, -0.45)
+mesh = SubResource("BoxMesh_llxbw")
+
+[node name="MeshInstance3D11" type="MeshInstance3D" parent="BigGear2" unique_id=1408971396]
+transform = Transform3D(0.37, 0, 0, 0, -6.5567085e-09, 0.15, 0, -0.15, -6.5567085e-09, 0.612, 0, -0.6)
+mesh = SubResource("BoxMesh_llxbw")
+
+[node name="MeshInstance3D12" type="MeshInstance3D" parent="BigGear2" unique_id=133326440]
+transform = Transform3D(0.37, 0, 0, 0, -6.5567085e-09, 0.15, 0, -0.15, -6.5567085e-09, 0.612, 0, 0.6)
+mesh = SubResource("BoxMesh_llxbw")
+
+[node name="MeshInstance3D15" type="MeshInstance3D" parent="BigGear2" unique_id=2004561729]
+transform = Transform3D(0.37, 0, 0, 0, 0.10606602, 0.10606603, 0, -0.10606603, 0.10606602, 0.612, 0.45, -0.45)
+mesh = SubResource("BoxMesh_llxbw")
+
+[node name="MeshInstance3D16" type="MeshInstance3D" parent="BigGear2" unique_id=567773527]
+transform = Transform3D(0.37, 0, 0, 0, 0.10606602, 0.10606603, 0, -0.10606603, 0.10606602, 0.612, -0.45, 0.45)
+mesh = SubResource("BoxMesh_llxbw")
+
+[node name="MeshInstance3D17" type="MeshInstance3D" parent="BigGear2" unique_id=635094923]
+transform = Transform3D(0.37, 0, 0, 0, 0.10606602, 0.10606603, 0, -0.10606603, 0.10606602, 0.612, 0.45, 0.45)
+mesh = SubResource("BoxMesh_llxbw")
+
+[node name="MeshInstance3D18" type="MeshInstance3D" parent="BigGear2" unique_id=1134895145]
+transform = Transform3D(0.37, 0, 0, 0, 0.10606602, 0.10606603, 0, -0.10606603, 0.10606602, 0.612, -0.45, -0.45)
+mesh = SubResource("BoxMesh_llxbw")
+
+[node name="MeshInstance3D13" type="MeshInstance3D" parent="BigGear2" unique_id=673157883]
+transform = Transform3D(0.37, 0, 0, 0, -0.15000002, -1.3113418e-08, 0, 1.3113418e-08, -0.15000002, 0.612, -0.6, 0)
+mesh = SubResource("BoxMesh_llxbw")
+
+[node name="MeshInstance3D14" type="MeshInstance3D" parent="BigGear2" unique_id=1731319630]
+transform = Transform3D(0.37, 0, 0, 0, -0.15000002, -1.3113418e-08, 0, 1.3113418e-08, -0.15000002, 0.612, 0.6, 0)
+mesh = SubResource("BoxMesh_llxbw")
+
+[node name="MeshInstance3D4" type="MeshInstance3D" parent="BigGear2" unique_id=5684362]
+transform = Transform3D(0.37, 0, 0, 0, -2.4041263e-08, -0.15, 0, 0.55, -6.5567085e-09, 0.611, 0.45, 0)
+mesh = SubResource("BoxMesh_llxbw")
+
+[node name="MeshInstance3D5" type="MeshInstance3D" parent="BigGear2" unique_id=427565470]
+transform = Transform3D(0.37, 0, 0, 0, -2.4041263e-08, -0.15, 0, 0.55, -6.5567085e-09, 0.611, -0.45, 0)
+mesh = SubResource("BoxMesh_llxbw")
+
+[node name="MeshInstance3D6" type="MeshInstance3D" parent="BigGear2" unique_id=1397133651]
+transform = Transform3D(0.37, 0, 0, 0, 0.24748737, -0.10606602, 0, 0.24748737, 0.10606602, 0.612, -0.35, 0.35)
+mesh = SubResource("BoxMesh_llxbw")
+
+[node name="MeshInstance3D7" type="MeshInstance3D" parent="BigGear2" unique_id=1553893549]
+transform = Transform3D(0.37, 0, 0, 0, 0.24748737, -0.10606602, 0, 0.24748737, 0.10606602, 0.612, 0.35, -0.35)
+mesh = SubResource("BoxMesh_llxbw")
+
+[node name="MeshInstance3D8" type="MeshInstance3D" parent="BigGear2" unique_id=1268816348]
+transform = Transform3D(0.37, 0, 0, 0, 0.24748737, 0.10606602, 0, -0.24748737, 0.10606602, 0.612, 0.35, 0.35)
+mesh = SubResource("BoxMesh_llxbw")
+
+[node name="MeshInstance3D9" type="MeshInstance3D" parent="BigGear2" unique_id=421800964]
+transform = Transform3D(0.37, 0, 0, 0, 0.24748737, 0.10606602, 0, -0.24748737, 0.10606602, 0.612, -0.35, -0.35)
+mesh = SubResource("BoxMesh_llxbw")
+
+[node name="MeshInstance3D10" type="MeshInstance3D" parent="BigGear2" unique_id=1841827427]
+transform = Transform3D(-1.0927845e-08, 0.063, 4.440892e-16, -0.067200504, -7.402317e-10, 0.24079886, 0.24079886, 2.652464e-09, 0.067200504, 0.706, 0, 0)
+mesh = SubResource("CylinderMesh_2md8h")
+
+[node name="AnimatableBody3D" type="AnimatableBody3D" parent="." unique_id=536424769]
+
+[node name="LadderPart2Col" type="CollisionShape3D" parent="AnimatableBody3D" unique_id=417105357]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.755, 0.38542098, 0.75)
+shape = SubResource("BoxShape3D_3ny47")
+
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="AnimatableBody3D" unique_id=511062599]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.75, 0.12316197, 0.7498245)
+shape = SubResource("BoxShape3D_3ny47")
+
+[node name="default4" parent="." unique_id=1259942831 instance=ExtResource("4_jui2r")]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 1.5, 0, 0)
+
+[node name="ClimbZone" type="Area3D" parent="." unique_id=1007024523]
+monitoring = false
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="ClimbZone" unique_id=661111944]
+transform = Transform3D(6, 0, 0, 0, 8.975, 0, 0, 0, 25, 0.7661133, 0.33610272, 2.250393)
+shape = SubResource("BoxShape3D_44p0g")
+
+[node name="SmokeParticles" type="GPUParticles3D" parent="." unique_id=1018742622]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.6895376, 0, 0.05226457)
+amount = 27
+lifetime = 5.13
+process_material = SubResource("ParticleProcessMaterial_jui2r")
+draw_pass_1 = SubResource("BoxMesh_2md8h")
+
+[node name="LadderAnimation" type="AnimationPlayer" parent="." unique_id=1684239383]
+libraries/ = SubResource("AnimationLibrary_2md8h")
+
+[connection signal="body_entered" from="ClimbZone" to="." method="OnClimbZoneBodyEntered"]
+[connection signal="body_exited" from="ClimbZone" to="." method="OnClimbZoneBodyExited"]

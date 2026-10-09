@@ -1,10 +1,11 @@
 [gd_scene format=3 uid="uid://cpwubgnqjghex"]
 
 [ext_resource type="Script" uid="uid://bbe88s8mj5mgn" path="res://Code/Torch.cs" id="1_pa17o"]
-[ext_resource type="Texture2D" uid="uid://3n4xsyuwcuav" path="res://Sprites/WoodFloor.png" id="2_beu3c"]
+[ext_resource type="Texture2D" uid="uid://3n4xsyuwcuav" path="res://Sprites/2DArt/WoodFloor.png" id="2_beu3c"]
 [ext_resource type="Shader" uid="uid://bafdy13tdvqo0" path="res://Shaders/WaterShader.gdshader" id="2_h1t0l"]
-[ext_resource type="Material" uid="uid://c2702vcr80w08" path="res://Sprites/Metal.tres" id="3_spjw2"]
+[ext_resource type="Material" uid="uid://c2702vcr80w08" path="res://Sprites/2DArt/Metal.tres" id="3_spjw2"]
 [ext_resource type="AudioStream" uid="uid://dy3bienk08u3o" path="res://MusicAndSoundEffects/dragon-studio-fire-crackling-sounds-427410.mp3" id="5_kg6dd"]
+[ext_resource type="PackedScene" uid="uid://bhyvukww1u28k" path="res://Sprites/3DObjects/Torch.gltf" id="6_7ufd5"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_beu3c"]
 albedo_color = Color(0.4452231, 0.22685435, 1.4439226e-07, 1)
@@ -97,6 +98,7 @@ script = ExtResource("1_pa17o")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="TorchV_2" unique_id=1461281395]
 transform = Transform3D(1, 0, 0, 0, 5, 0, 0, 0, 1, 0, 0, 0)
+visible = false
 mesh = SubResource("BoxMesh_spjw2")
 
 [node name="MeshInstance3D6" type="MeshInstance3D" parent="TorchV_2" unique_id=933497456]
@@ -171,6 +173,10 @@ mesh = SubResource("PrismMesh_n1y4a")
 transform = Transform3D(1, 0, 0, 0, 0.5, 0, 0, 0, 1, 0, 2.75, 0)
 mesh = SubResource("BoxMesh_hs836")
 
+[node name="MeshInstance3D4" type="MeshInstance3D" parent="TorchV_2" unique_id=428562893]
+transform = Transform3D(1, 0, 0, 0, 0.5, 0, 0, 0, 1, 0, 2.75, 0)
+mesh = SubResource("BoxMesh_hs836")
+
 [node name="FlameLight" type="OmniLight3D" parent="." unique_id=21607346]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3.1146038, 0)
 light_color = Color(1, 0.5647059, 0, 1)
@@ -213,3 +219,6 @@ stream = ExtResource("5_kg6dd")
 volume_db = -40.0
 autoplay = true
 max_distance = 15.0
+
+[node name="default2" parent="." unique_id=1335881249 instance=ExtResource("6_7ufd5")]
+transform = Transform3D(8, 0, 0, 0, 8, 0, 0, 0, 8, 0.5, -2.5, 0.5)

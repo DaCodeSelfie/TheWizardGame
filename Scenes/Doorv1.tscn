@@ -1,15 +1,15 @@
 [gd_scene format=3 uid="uid://bm1jpgswml1js"]
 
 [ext_resource type="Script" uid="uid://dopep4utp5fv8" path="res://Code/DoubleDoor.cs" id="1_f3e4e"]
-[ext_resource type="Texture2D" uid="uid://dekgvgbjqyn3e" path="res://Sprites/WoodPanelBig.png" id="1_qllwq"]
-[ext_resource type="Texture2D" uid="uid://dd06t6k7o464n" path="res://Sprites/Bjälk.png" id="2_nwfps"]
-[ext_resource type="Texture2D" uid="uid://3n4xsyuwcuav" path="res://Sprites/WoodFloor.png" id="3_htkfj"]
-[ext_resource type="Texture2D" uid="uid://b413cmaocks3v" path="res://Sprites/MudFloor.png" id="4_hw2mw"]
+[ext_resource type="Texture2D" uid="uid://dekgvgbjqyn3e" path="res://Sprites/2DArt/WoodPanelBig.png" id="1_qllwq"]
+[ext_resource type="Texture2D" uid="uid://b413cmaocks3v" path="res://Sprites/2DArt/MudFloor.png" id="4_hw2mw"]
+[ext_resource type="PackedScene" uid="uid://dfmck8c8pjeix" path="res://Sprites/3DObjects/Beam 1x5x1.gltf" id="4_qhms6"]
 [ext_resource type="AudioStream" uid="uid://4imnhgtwc0da" path="res://MusicAndSoundEffects/dragon-studio-heavy-door-unlocking-515258.mp3" id="6_tpjyr"]
+[ext_resource type="PackedScene" uid="uid://bi4rsq56tu5wk" path="res://Sprites/3DObjects/MoldyBeam0.75x5x1.5.gltf" id="6_udk1r"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_qllwq"]
 albedo_texture = ExtResource("1_qllwq")
-uv1_scale = Vector3(2.895, 1.81, 2.895)
+uv1_scale = Vector3(4, 2.468, 4)
 uv1_offset = Vector3(-0.01, 0, 0)
 texture_filter = 0
 
@@ -23,14 +23,6 @@ metallic_specular = 0.6
 
 [sub_resource type="BoxMesh" id="BoxMesh_htkfj"]
 material = SubResource("StandardMaterial3D_nwfps")
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_htkfj"]
-albedo_texture = ExtResource("2_nwfps")
-uv1_scale = Vector3(3, 2.005, 1)
-texture_filter = 0
-
-[sub_resource type="BoxMesh" id="BoxMesh_hw2mw"]
-material = SubResource("StandardMaterial3D_htkfj")
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_htkfj"]
 
@@ -98,14 +90,6 @@ _data = {
 [sub_resource type="BoxShape3D" id="BoxShape3D_nwfps"]
 size = Vector3(10, 5, 9)
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_hw2mw"]
-albedo_texture = ExtResource("3_htkfj")
-uv1_scale = Vector3(6, 1, 1)
-texture_filter = 0
-
-[sub_resource type="BoxMesh" id="BoxMesh_rwy63"]
-material = SubResource("StandardMaterial3D_hw2mw")
-
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_rwy63"]
 albedo_texture = ExtResource("4_hw2mw")
 uv1_scale = Vector3(4.61, -0.155, 1)
@@ -170,16 +154,15 @@ mesh = SubResource("BoxMesh_htkfj")
 transform = Transform3D(5.001, 0, 0, 0, 0.2, 0, 0, 0, 1.2, -2.5, -2, 0)
 mesh = SubResource("BoxMesh_htkfj")
 
-[node name="MeshInstance3D2" type="MeshInstance3D" parent="RightDoor" unique_id=790340139]
-transform = Transform3D(1, 0, 0, 0, 5, 0, 0, 0, 0.19999999, -5, 0, 0.6)
-mesh = SubResource("BoxMesh_hw2mw")
-
 [node name="StaticBody3D" type="StaticBody3D" parent="RightDoor" unique_id=143935845]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, 0)
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="RightDoor/StaticBody3D" unique_id=470881500]
 transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 1, -3.5, 0, 0)
 shape = SubResource("BoxShape3D_htkfj")
+
+[node name="default2" parent="RightDoor" unique_id=1409968773 instance=ExtResource("4_qhms6")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 0.2, -5.5, -2.5, 0.5)
 
 [node name="LeftDoor" type="Node3D" parent="." unique_id=933632733]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5, 0, 0)
@@ -213,17 +196,25 @@ shape = SubResource("BoxShape3D_nwfps")
 
 [node name="Beams" type="Node3D" parent="." unique_id=1088392834]
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="Beams" unique_id=1613419247]
-transform = Transform3D(4.996954, 0, -0.052349243, 0, 1.5, 0, 0.17449749, 0, 1.4990863, 2.5, 3.25, 0)
-mesh = SubResource("BoxMesh_rwy63")
-
-[node name="MeshInstance3D2" type="MeshInstance3D" parent="Beams" unique_id=1749978370]
-transform = Transform3D(4.9969616, 0.009844859, 0.051354513, -0.048379444, 1.4936291, 0.13733846, -0.16745003, -0.13775188, 1.4928169, -2.5, 3.25, 0)
-mesh = SubResource("BoxMesh_rwy63")
-
 [node name="MeshInstance3D3" type="MeshInstance3D" parent="Beams" unique_id=165480246]
 transform = Transform3D(10, 0, 0, 0, 0.6, 0, 0, 0, 1.75, 0, 3.75, 0)
 mesh = SubResource("BoxMesh_fky6c")
+
+[node name="BeamV_2" type="Node3D" parent="Beams" unique_id=954087998]
+transform = Transform3D(-0.013688924, -0.9993023, 0.03475029, 0.9956701, -0.010427021, 0.09237059, -0.09194381, 0.03586428, 0.99511814, -1.039042, 3.132524, -0.7811506)
+
+[node name="default2" parent="Beams/BeamV_2" unique_id=894433046 instance=ExtResource("6_udk1r")]
+
+[node name="default3" parent="Beams/BeamV_2" unique_id=314680274 instance=ExtResource("6_udk1r")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.75, 0, 0)
+
+[node name="BeamV_3" type="Node3D" parent="Beams" unique_id=180566824]
+transform = Transform3D(-0.010465413, -0.99933606, -0.034899496, 0.99994516, -0.010471792, 0, -0.00036546026, -0.03489758, 0.99939084, 4.027253, 3.2374678, -0.69082665)
+
+[node name="default2" parent="Beams/BeamV_3" unique_id=739685768 instance=ExtResource("6_udk1r")]
+
+[node name="default3" parent="Beams/BeamV_3" unique_id=1290433694 instance=ExtResource("6_udk1r")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.75, 0, 0)
 
 [node name="DustParticles" type="GPUParticles3D" parent="." unique_id=2018803431]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.960589, 0)

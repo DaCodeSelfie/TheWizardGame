@@ -1,8 +1,8 @@
 [gd_scene format=3 uid="uid://coxwy0iljttqt"]
 
 [ext_resource type="Script" uid="uid://be54fapmf3glp" path="res://Code/BrokenGearbox.cs" id="1_hjegb"]
-[ext_resource type="Texture2D" uid="uid://3n4xsyuwcuav" path="res://Sprites/WoodFloor.png" id="2_p561q"]
-[ext_resource type="Material" uid="uid://qcy4tifpwikp" path="res://Sprites/CopperMetal.tres" id="3_dwneh"]
+[ext_resource type="Texture2D" uid="uid://3n4xsyuwcuav" path="res://Sprites/2DArt/WoodFloor.png" id="2_p561q"]
+[ext_resource type="Material" uid="uid://qcy4tifpwikp" path="res://Sprites/2DArt/CopperMetal.tres" id="3_dwneh"]
 [ext_resource type="Script" uid="uid://ddfmaov1fauwy" path="res://Code/SparkLight.cs" id="4_hjegb"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_qrgu4"]

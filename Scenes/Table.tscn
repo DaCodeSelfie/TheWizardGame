@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://7inym8si5fog"]
 
-[ext_resource type="Texture2D" uid="uid://dekgvgbjqyn3e" path="res://Sprites/WoodPanelBig.png" id="1_2sdc1"]
-[ext_resource type="Texture2D" uid="uid://dugjqvqa075sk" path="res://Sprites/MoldyBjälkIron.png" id="2_muxx0"]
+[ext_resource type="Texture2D" uid="uid://dekgvgbjqyn3e" path="res://Sprites/2DArt/WoodPanelBig.png" id="1_2sdc1"]
+[ext_resource type="Texture2D" uid="uid://dugjqvqa075sk" path="res://Sprites/2DArt/MoldyBjälkIron.png" id="2_muxx0"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_muxx0"]
 albedo_color = Color(1.6197081, 1.6197081, 1.6197081, 1)
