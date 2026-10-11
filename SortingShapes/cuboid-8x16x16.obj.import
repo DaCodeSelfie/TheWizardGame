@@ -1,0 +1,25 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://cqryo3ecgab0u"
+path="res://.godot/imported/cuboid-8x16x16.obj-be6589f014d470f8f76218dcb72e3818.mesh"
+
+[deps]
+
+files=["res://.godot/imported/cuboid-8x16x16.obj-be6589f014d470f8f76218dcb72e3818.mesh"]
+
+source_file="res://SortingShapes/cuboid-8x16x16.obj"
+dest_files=["res://.godot/imported/cuboid-8x16x16.obj-be6589f014d470f8f76218dcb72e3818.mesh", "res://.godot/imported/cuboid-8x16x16.obj-be6589f014d470f8f76218dcb72e3818.mesh"]
+
+[params]
+
+generate_tangents=true
+generate_lods=true
+generate_shadow_mesh=true
+generate_lightmap_uv2=false
+generate_lightmap_uv2_texel_size=0.2
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+force_disable_mesh_compression=false

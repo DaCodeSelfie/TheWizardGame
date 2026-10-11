@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://c3noclkwtpo00"]
 
 [ext_resource type="Script" uid="uid://bgsr4p2c02vky" path="res://Code/Ladder.cs" id="1_fc354"]
-[ext_resource type="Material" uid="uid://bcy3hvhq7ju60" path="res://MetalMaterial.material" id="2_fc354"]
+[ext_resource type="Material" uid="uid://bcy3hvhq7ju60" path="res://Sprites/Material/MetalMaterial.material" id="2_fc354"]
 [ext_resource type="Material" uid="uid://qcy4tifpwikp" path="res://Sprites/2DArt/CopperMetal.tres" id="3_cve4p"]
 
 [sub_resource type="BoxMesh" id="BoxMesh_4gp4o"]

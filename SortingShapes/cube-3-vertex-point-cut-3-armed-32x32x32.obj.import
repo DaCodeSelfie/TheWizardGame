@@ -1,0 +1,25 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://diuvagjnjru6n"
+path="res://.godot/imported/cube-3-vertex-point-cut-3-armed-32x32x32.obj-47f8797a791bc93c15cb49be9294b278.mesh"
+
+[deps]
+
+files=["res://.godot/imported/cube-3-vertex-point-cut-3-armed-32x32x32.obj-47f8797a791bc93c15cb49be9294b278.mesh"]
+
+source_file="res://SortingShapes/cube-3-vertex-point-cut-3-armed-32x32x32.obj"
+dest_files=["res://.godot/imported/cube-3-vertex-point-cut-3-armed-32x32x32.obj-47f8797a791bc93c15cb49be9294b278.mesh", "res://.godot/imported/cube-3-vertex-point-cut-3-armed-32x32x32.obj-47f8797a791bc93c15cb49be9294b278.mesh"]
+
+[params]
+
+generate_tangents=true
+generate_lods=true
+generate_shadow_mesh=true
+generate_lightmap_uv2=false
+generate_lightmap_uv2_texel_size=0.2
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+force_disable_mesh_compression=false

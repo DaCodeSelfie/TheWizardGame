@@ -39,7 +39,7 @@
 [ext_resource type="PackedScene" uid="uid://vmkal32i20c" path="res://Scenes/TNT.tscn" id="33_gdmyf"]
 [ext_resource type="Script" uid="uid://bymso7smgdhf0" path="res://Code/RoamArea.cs" id="34_34gk8"]
 [ext_resource type="PackedScene" uid="uid://bm2uhtrk58ycp" path="res://Scenes/Rat.tscn" id="35_fctpv"]
-[ext_resource type="PackedScene" uid="uid://dwswajcyh6p4o" path="res://MechanicalLadder.tscn" id="40_bndkf"]
+[ext_resource type="PackedScene" uid="uid://dwswajcyh6p4o" path="res://Scenes/MechanicalLadder.tscn" id="40_bndkf"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_0e82a"]
 size = Vector3(8.839111, 0.8076172, 31.633911)

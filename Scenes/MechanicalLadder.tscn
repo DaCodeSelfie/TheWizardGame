@@ -3,7 +3,7 @@
 [ext_resource type="PackedScene" uid="uid://cohbld4h1ibnp" path="res://Sprites/3DObjects/NewLadder.gltf" id="1_pwkok"]
 [ext_resource type="Script" uid="uid://bgsr4p2c02vky" path="res://Code/Ladder.cs" id="2_jui2r"]
 [ext_resource type="Material" uid="uid://qcy4tifpwikp" path="res://Sprites/2DArt/CopperMetal.tres" id="3_44p0g"]
-[ext_resource type="PackedScene" uid="uid://duahdacjluwkc" path="res://MetalBoxNew.gltf" id="4_jui2r"]
+[ext_resource type="PackedScene" uid="uid://duahdacjluwkc" path="res://Sprites/3DObjects/MetalBoxNew.gltf" id="4_jui2r"]
 
 [sub_resource type="CylinderMesh" id="CylinderMesh_jui2r"]
 material = ExtResource("3_44p0g")

@@ -2,8 +2,8 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c6sh2h7aihau"
-path.s3tc="res://.godot/imported/MetalBoxNew_0.png-6cab66f285386e4795d7c11528b7f30c.s3tc.ctex"
+uid="uid://bn3tft1kr7mpe"
+path.s3tc="res://.godot/imported/MetalBoxNew_0.png-2956c4f8d64a3f79e95dbdb743ee4bdd.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -14,8 +14,8 @@ generator_parameters={
 
 [deps]
 
-source_file="res://MetalBoxNew_0.png"
-dest_files=["res://.godot/imported/MetalBoxNew_0.png-6cab66f285386e4795d7c11528b7f30c.s3tc.ctex"]
+source_file="res://Sprites/3DObjects/MetalBoxNew_0.png"
+dest_files=["res://.godot/imported/MetalBoxNew_0.png-2956c4f8d64a3f79e95dbdb743ee4bdd.s3tc.ctex"]
 
 [params]
 

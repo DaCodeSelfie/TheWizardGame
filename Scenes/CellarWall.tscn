@@ -1,24 +1,37 @@
 [gd_scene format=3 uid="uid://bjiji2d4nbe04"]
 
+[ext_resource type="ArrayMesh" uid="uid://vwp61tvwc3nt" path="res://Sprites/3DShape/cube-diag-cut-16x16x16.obj" id="3_7c0fp"]
 [ext_resource type="PackedScene" uid="uid://cbs7knnhwv8fv" path="res://Scenes/WallNewV.1.tscn" id="4_bysqy"]
+[ext_resource type="Texture2D" uid="uid://ddrmnsuil5l0e" path="res://NewSlopenBeam90.png" id="4_qv3g8"]
 [ext_resource type="PackedScene" uid="uid://bk5rk6uq7xacg" path="res://Sprites/3DObjects/NewPillar.gltf" id="5_qv3g8"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_3ny47"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_ylhik"]
 
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_bysqy"]
+albedo_texture = ExtResource("4_qv3g8")
+uv1_scale = Vector3(81.205, -81.805, 4.84)
+uv1_offset = Vector3(36.35, 0.32, -5.75)
+uv1_triplanar_sharpness = 74.99994
+uv2_triplanar = true
+texture_filter = 0
+
 [node name="Wall" type="StaticBody3D" unique_id=953180017]
 
 [node name="CollisionShape3D3" type="CollisionShape3D" parent="." unique_id=2043102173]
 transform = Transform3D(2, 0, 0, 0, 5, 0, 0, 0, 2, 7.5, 0, 0)
+visible = false
 shape = SubResource("BoxShape3D_3ny47")
 
 [node name="CollisionShape3D2" type="CollisionShape3D" parent="." unique_id=1707499365]
 transform = Transform3D(15, 0, 0, 0, 5, 0, 0, 0, 1, -0.25299978, 0.065999985, 0)
+visible = false
 shape = SubResource("BoxShape3D_ylhik")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=195340935]
 transform = Transform3D(2, 0, 0, 0, 5, 0, 0, 0, 2, -7.5, 0, 0)
+visible = false
 shape = SubResource("BoxShape3D_3ny47")
 
 [node name="Node3D" parent="." unique_id=310829085 instance=ExtResource("4_bysqy")]
@@ -29,3 +42,43 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.5, -2.5, -1)
 
 [node name="default3" parent="." unique_id=1801719766 instance=ExtResource("5_qv3g8")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.5, -2.5, -1.001)
+
+[node name="CubeDiagCut16x16x16" type="MeshInstance3D" parent="." unique_id=1236847995]
+transform = Transform3D(-2.1855695e-07, 0.75, 0, -5, -3.278354e-08, 0, 0, 0, 0.75, -6.5, 2.5, 0.25)
+mesh = ExtResource("3_7c0fp")
+surface_material_override/0 = SubResource("StandardMaterial3D_bysqy")
+
+[node name="CubeDiagCut16x16x17" type="MeshInstance3D" parent="." unique_id=1857351277]
+transform = Transform3D(-2.1855695e-07, -0.75, 0, 5, -3.278354e-08, 0, 0, 0, 0.75, 6.5, -2.5, 0.25)
+mesh = ExtResource("3_7c0fp")
+surface_material_override/0 = SubResource("StandardMaterial3D_bysqy")
+
+[node name="CubeDiagCut16x16x18" type="MeshInstance3D" parent="." unique_id=557691711]
+transform = Transform3D(9.553427e-15, 3.278354e-08, -0.75, 5, -3.278354e-08, 0, -2.1855695e-07, -0.75, -3.278354e-08, 6.5, -2.5, -0.25)
+mesh = ExtResource("3_7c0fp")
+surface_material_override/0 = SubResource("StandardMaterial3D_bysqy")
+
+[node name="CubeDiagCut16x16x19" type="MeshInstance3D" parent="." unique_id=192752063]
+transform = Transform3D(9.553427e-15, -3.278354e-08, 0.75, -5, -3.278354e-08, 0, 2.1855695e-07, -0.75, -3.278354e-08, -6.5, 2.5, -0.25)
+mesh = ExtResource("3_7c0fp")
+surface_material_override/0 = SubResource("StandardMaterial3D_bysqy")
+
+[node name="CubeDiagCut16x16x20" type="MeshInstance3D" parent="." unique_id=1583447823]
+transform = Transform3D(12.5, 0, 0, 0, -1.0927847e-08, -0.25, 0, 0.25, -1.0927847e-08, -6.25, 2, 0.25)
+mesh = ExtResource("3_7c0fp")
+surface_material_override/0 = SubResource("StandardMaterial3D_bysqy")
+
+[node name="CubeDiagCut16x16x21" type="MeshInstance3D" parent="." unique_id=489769851]
+transform = Transform3D(12.5, 0, 0, 0, 0.25, 0, 0, 0, 0.25, -6.25, -2, 0.25)
+mesh = ExtResource("3_7c0fp")
+surface_material_override/0 = SubResource("StandardMaterial3D_bysqy")
+
+[node name="CubeDiagCut16x16x22" type="MeshInstance3D" parent="." unique_id=1277622977]
+transform = Transform3D(-12.5, 2.1855694e-08, -9.553427e-16, 0, -1.0927847e-08, -0.25, -1.0927847e-06, -0.25, 1.0927847e-08, 6.25, 2, -0.25)
+mesh = ExtResource("3_7c0fp")
+surface_material_override/0 = SubResource("StandardMaterial3D_bysqy")
+
+[node name="CubeDiagCut16x16x23" type="MeshInstance3D" parent="." unique_id=1934012509]
+transform = Transform3D(-12.5, 0, 2.1855694e-08, 0, 0.25, 0, -1.0927847e-06, 0, -0.25, 6.25, -2, -0.25)
+mesh = ExtResource("3_7c0fp")
+surface_material_override/0 = SubResource("StandardMaterial3D_bysqy")

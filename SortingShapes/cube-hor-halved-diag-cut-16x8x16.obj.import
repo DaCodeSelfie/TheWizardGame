@@ -1,0 +1,25 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://bollstdodyei2"
+path="res://.godot/imported/cube-hor-halved-diag-cut-16x8x16.obj-15336f44187afe58d8401922d95c1752.mesh"
+
+[deps]
+
+files=["res://.godot/imported/cube-hor-halved-diag-cut-16x8x16.obj-15336f44187afe58d8401922d95c1752.mesh"]
+
+source_file="res://SortingShapes/cube-hor-halved-diag-cut-16x8x16.obj"
+dest_files=["res://.godot/imported/cube-hor-halved-diag-cut-16x8x16.obj-15336f44187afe58d8401922d95c1752.mesh", "res://.godot/imported/cube-hor-halved-diag-cut-16x8x16.obj-15336f44187afe58d8401922d95c1752.mesh"]
+
+[params]
+
+generate_tangents=true
+generate_lods=true
+generate_shadow_mesh=true
+generate_lightmap_uv2=false
+generate_lightmap_uv2_texel_size=0.2
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+force_disable_mesh_compression=false

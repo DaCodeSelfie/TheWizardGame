@@ -1,0 +1,65 @@
+[gd_scene format=3 uid="uid://bluo5sr5k3qjs"]
+
+[ext_resource type="ArrayMesh" uid="uid://bv7lgydaaaao6" path="res://SortingShapes/sphere-8x16x8.obj" id="1_goh7t"]
+[ext_resource type="ArrayMesh" uid="uid://c1wv7evplq3b8" path="res://SortingShapes/arch-16x32x48.obj" id="2_525he"]
+[ext_resource type="ArrayMesh" uid="uid://b5stfhljnhl4c" path="res://SortingShapes/arch-16x8x8.obj" id="3_vmgog"]
+[ext_resource type="ArrayMesh" uid="uid://bb11xmikdvoaw" path="res://SortingShapes/chest-14-faced-half-loop-16x16x16.obj" id="4_0frah"]
+[ext_resource type="ArrayMesh" uid="uid://bw8dvjithg1x0" path="res://SortingShapes/cube-3-vertex-point-cut-16x16x16.obj" id="5_r31y7"]
+[ext_resource type="ArrayMesh" uid="uid://vwp61tvwc3nt" path="res://Sprites/3DShape/cube-diag-cut-16x16x16.obj" id="6_xi4u8"]
+[ext_resource type="ArrayMesh" uid="uid://bogn3ghx68elc" path="res://SortingShapes/cube-3-vertex-point-cut-1-armed-32x16x16.obj" id="7_prjjm"]
+[ext_resource type="ArrayMesh" uid="uid://xl7u4g201h5k" path="res://SortingShapes/cube-3-vertex-point-cut-2-armed-32x16x32.obj" id="8_d0koi"]
+[ext_resource type="ArrayMesh" uid="uid://dn1x4s18xldt4" path="res://SortingShapes/cube-4-vertex-point-cut-16x16x16.obj" id="9_7x3qc"]
+[ext_resource type="ArrayMesh" uid="uid://bg157y5hfhker" path="res://SortingShapes/cube-16x16x16.obj" id="10_rp4u2"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_kpjs8"]
+
+[node name="Node3D" type="Node3D" unique_id=1787561912]
+
+[node name="Sphere8x16x8" type="MeshInstance3D" parent="." unique_id=910668658]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.834836, 0, 1.3367739)
+mesh = ExtResource("1_goh7t")
+surface_material_override/0 = SubResource("StandardMaterial3D_kpjs8")
+
+[node name="Arch16x32x48" type="MeshInstance3D" parent="." unique_id=577806804]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.566052, 0, 2.7188516)
+mesh = ExtResource("2_525he")
+
+[node name="Arch16x8x8" type="MeshInstance3D" parent="." unique_id=1947176016]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.0429733, 0, 2.1612291)
+mesh = ExtResource("3_vmgog")
+
+[node name="Chest14FacedHalfLoop16x16x16" type="MeshInstance3D" parent="." unique_id=807294100]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.6854991, 0, 3.4884663)
+mesh = ExtResource("4_0frah")
+
+[node name="Cube3VertexPointCut16x16x16" type="MeshInstance3D" parent="." unique_id=837531639]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.7216997, 0, 4.409666)
+mesh = ExtResource("5_r31y7")
+
+[node name="CubeDiagCut16x16x16" type="MeshInstance3D" parent="." unique_id=1453425777]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.0929695, 0, 4.282107)
+mesh = ExtResource("6_xi4u8")
+
+[node name="Chest14FacedHalfLoop16x16x17" type="MeshInstance3D" parent="." unique_id=2018205583]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.3535986, 0, 5.415715)
+mesh = ExtResource("4_0frah")
+
+[node name="Cube3VertexPointCut1Armed32x16x16" type="MeshInstance3D" parent="." unique_id=580958722]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.4489901, 0, 5.261428)
+mesh = ExtResource("7_prjjm")
+
+[node name="Cube3VertexPointCut2Armed32x16x32" type="MeshInstance3D" parent="." unique_id=1661685042]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.602071, 0, 4.0031767)
+mesh = ExtResource("8_d0koi")
+
+[node name="Cube4VertexPointCut16x16x16" type="MeshInstance3D" parent="." unique_id=1182330584]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.6822257, 0, 7.3852363)
+mesh = ExtResource("9_7x3qc")
+
+[node name="Cube16x16x16" type="MeshInstance3D" parent="." unique_id=1505220089]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.4949734, 2.3841858e-07, 4.1082554)
+mesh = ExtResource("10_rp4u2")
+
+[node name="CubeDiagCut16x16x17" type="MeshInstance3D" parent="." unique_id=196209410]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.88810754, 0, 6.1408153)
+mesh = ExtResource("6_xi4u8")
