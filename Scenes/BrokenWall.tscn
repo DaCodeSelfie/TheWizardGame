@@ -1,22 +1,32 @@
 [gd_scene format=3 uid="uid://c4woxw1mlyed1"]
 
 [ext_resource type="Script" uid="uid://bj2q14wm5n7gw" path="res://Code/CrackedWall.cs" id="1_3kt5f"]
-[ext_resource type="Texture2D" uid="uid://npt42rbe7y1d" path="res://Sprites/2DArt/RockWallCellar.png" id="1_er5xe"]
-[ext_resource type="PackedScene" uid="uid://ceeeotmo5exqi" path="res://Scenes/moldy_beam.tscn" id="2_3kt5f"]
-[ext_resource type="PackedScene" uid="uid://0ushcyc17s0r" path="res://Scenes/MoldyBeamIron.tscn" id="3_dmd7g"]
+[ext_resource type="PackedScene" uid="uid://dyrs1tk6u2ggb" path="res://Sprites/3DObjects/WallNewWall.gltf" id="3_er5xe"]
+[ext_resource type="PackedScene" uid="uid://bk5rk6uq7xacg" path="res://Sprites/3DObjects/NewPillar.gltf" id="4_3kt5f"]
+[ext_resource type="ArrayMesh" uid="uid://vwp61tvwc3nt" path="res://Sprites/3DShape/cube-diag-cut-16x16x16.obj" id="5_48mhr"]
+[ext_resource type="PackedScene" uid="uid://c1ugyeghhhp7g" path="res://Sprites/3DObjects/WallNewRim.gltf" id="5_dmd7g"]
+[ext_resource type="Texture2D" uid="uid://ddrmnsuil5l0e" path="res://Sprites/3DObjects/NewSlopenBeam90.png" id="6_y1sh1"]
+[ext_resource type="Texture2D" uid="uid://bhroe84keytgt" path="res://Sprites/2DArt/wOOD.png" id="7_0kkkq"]
+[ext_resource type="PackedScene" uid="uid://deqs7hsvei34g" path="res://Sprites/3DObjects/BeamDirtCrack4x4.gltf" id="8_0kkkq"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_fgjl5"]
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_8r34y"]
-albedo_texture = ExtResource("1_er5xe")
-uv1_scale = Vector3(7, 1.3, 1)
-texture_filter = 0
-
-[sub_resource type="BoxMesh" id="BoxMesh_rytl6"]
-material = SubResource("StandardMaterial3D_8r34y")
-
 [sub_resource type="BoxShape3D" id="BoxShape3D_3kt5f"]
 size = Vector3(1, 1.1650391, 0.6965332)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_bysqy"]
+albedo_texture = ExtResource("6_y1sh1")
+uv1_scale = Vector3(16, 16, 1)
+uv1_triplanar_sharpness = 0.9518548
+uv2_triplanar = true
+texture_filter = 0
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_qv3g8"]
+albedo_texture = ExtResource("7_0kkkq")
+uv1_scale = Vector3(140, 5, 1)
+uv1_offset = Vector3(-0.065, 0, 0)
+uv2_triplanar = true
+texture_filter = 0
 
 [node name="CrackedWall" type="StaticBody3D" unique_id=953180017]
 script = ExtResource("1_3kt5f")
@@ -24,54 +34,6 @@ script = ExtResource("1_3kt5f")
 [node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=386964298]
 transform = Transform3D(15, 0, 0, 0, 5, 0, 0, 0, 1, 0, 0, 0)
 shape = SubResource("BoxShape3D_fgjl5")
-
-[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=1194258724]
-transform = Transform3D(15, 0, 0, 0, 5, 0, 0, 0, 1, 0, 0, 0)
-mesh = SubResource("BoxMesh_rytl6")
-
-[node name="Beams" type="Node3D" parent="." unique_id=1110718234]
-
-[node name="MoldyBeam7" parent="Beams" unique_id=719188045 instance=ExtResource("2_3kt5f")]
-transform = Transform3D(-4.371139e-08, 1, 0, -1, -4.371139e-08, 0, 0, 0, 1, 4.25, 2.125, 0.002)
-
-[node name="CollisionShape3D" parent="Beams/MoldyBeam7" index="0" unique_id=1692336188]
-shape = null
-
-[node name="MoldyBeam8" parent="Beams" unique_id=1227005945 instance=ExtResource("2_3kt5f")]
-transform = Transform3D(-4.371139e-08, 1, 0, -1, -4.371139e-08, 0, 0, 0, 1, 0, 2.125, 0)
-
-[node name="CollisionShape3D" parent="Beams/MoldyBeam8" index="0" unique_id=1692336188]
-shape = null
-
-[node name="MoldyBeam9" parent="Beams" unique_id=1513872420 instance=ExtResource("2_3kt5f")]
-transform = Transform3D(-4.371139e-08, 1, 0, -1, -4.371139e-08, 0, 0, 0, 1, -4.25, 2.125, 0.002)
-
-[node name="CollisionShape3D" parent="Beams/MoldyBeam9" index="0" unique_id=1692336188]
-shape = null
-
-[node name="MoldyBeam10" parent="Beams" unique_id=1084687812 instance=ExtResource("2_3kt5f")]
-transform = Transform3D(-4.371139e-08, 1, 0, -1, -4.371139e-08, 0, 0, 0, 1, 4.25, -2.125, 0.002)
-
-[node name="CollisionShape3D" parent="Beams/MoldyBeam10" index="0" unique_id=1692336188]
-shape = null
-
-[node name="MoldyBeam11" parent="Beams" unique_id=1583442319 instance=ExtResource("2_3kt5f")]
-transform = Transform3D(-4.371139e-08, 1, 0, -1, -4.371139e-08, 0, 0, 0, 1, 0, -2.125, 0)
-
-[node name="CollisionShape3D" parent="Beams/MoldyBeam11" index="0" unique_id=1692336188]
-shape = null
-
-[node name="MoldyBeam12" parent="Beams" unique_id=721121123 instance=ExtResource("2_3kt5f")]
-transform = Transform3D(-4.371139e-08, 1, 0, -1, -4.371139e-08, 0, 0, 0, 1, -4.25, -2.125, 0.002)
-
-[node name="CollisionShape3D" parent="Beams/MoldyBeam12" index="0" unique_id=1692336188]
-shape = null
-
-[node name="Beam" parent="Beams" unique_id=1739259830 instance=ExtResource("3_dmd7g")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.5, 0, 0)
-
-[node name="Beam2" parent="Beams" unique_id=574604923 instance=ExtResource("3_dmd7g")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.5, 0, 0)
 
 [node name="InteractArea" type="Area3D" parent="." unique_id=730177497]
 
@@ -82,12 +44,75 @@ shape = SubResource("BoxShape3D_3kt5f")
 [node name="TNTAttachpoint" type="Node3D" parent="." unique_id=1606771185]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.7, 2)
 
+[node name="default2" parent="." unique_id=753535530 instance=ExtResource("5_dmd7g")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.25, 1.5, -0.5)
+
+[node name="default3" parent="." unique_id=396457934 instance=ExtResource("3_er5xe")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 0.5, -7.5, -2, 0.215)
+
+[node name="default4" parent="." unique_id=369778121 instance=ExtResource("4_3kt5f")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.5, -2.5, -1)
+
+[node name="default5" parent="." unique_id=200631036 instance=ExtResource("4_3kt5f")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.5, -2.5, -1)
+
+[node name="CubeDiagCut16x16x16" type="MeshInstance3D" parent="." unique_id=382611013]
+transform = Transform3D(-2.1855695e-07, 0.75, 0, -5, -3.278354e-08, 0, 0, 0, 0.75, -6.5, 2.5, 0.25)
+mesh = ExtResource("5_48mhr")
+surface_material_override/0 = SubResource("StandardMaterial3D_bysqy")
+
+[node name="CubeDiagCut16x16x17" type="MeshInstance3D" parent="." unique_id=845387067]
+transform = Transform3D(-2.1855695e-07, -0.75, 0, 5, -3.278354e-08, 0, 0, 0, 0.75, 6.5, -2.5, 0.25)
+mesh = ExtResource("5_48mhr")
+surface_material_override/0 = SubResource("StandardMaterial3D_bysqy")
+
+[node name="CubeDiagCut16x16x18" type="MeshInstance3D" parent="." unique_id=1284125407]
+transform = Transform3D(9.553427e-15, 3.278354e-08, -0.75, 5, -3.278354e-08, 0, -2.1855695e-07, -0.75, -3.278354e-08, 6.5, -2.5, -0.25)
+mesh = ExtResource("5_48mhr")
+surface_material_override/0 = SubResource("StandardMaterial3D_bysqy")
+
+[node name="CubeDiagCut16x16x19" type="MeshInstance3D" parent="." unique_id=1767191817]
+transform = Transform3D(9.553427e-15, -3.278354e-08, 0.75, -5, -3.278354e-08, 0, 2.1855695e-07, -0.75, -3.278354e-08, -6.5, 2.5, -0.25)
+mesh = ExtResource("5_48mhr")
+surface_material_override/0 = SubResource("StandardMaterial3D_bysqy")
+
+[node name="CubeDiagCut16x16x20" type="MeshInstance3D" parent="." unique_id=1768322790]
+transform = Transform3D(12.5, 0, 0, 0, -1.0927847e-08, -0.25, 0, 0.25, -1.0927847e-08, -6.25, 2, 0.25)
+mesh = ExtResource("5_48mhr")
+surface_material_override/0 = SubResource("StandardMaterial3D_qv3g8")
+
+[node name="CubeDiagCut16x16x21" type="MeshInstance3D" parent="." unique_id=777806757]
+transform = Transform3D(15, 0, 0, 0, 0.25, 0, 0, 0, 0.25, -7.5, -2, 0.25)
+mesh = ExtResource("5_48mhr")
+surface_material_override/0 = SubResource("StandardMaterial3D_qv3g8")
+
+[node name="CubeDiagCut16x16x22" type="MeshInstance3D" parent="." unique_id=1911440420]
+transform = Transform3D(-12.5, 2.1855694e-08, -9.553427e-16, 0, -1.0927847e-08, -0.25, -1.0927847e-06, -0.25, 1.0927847e-08, 6.25, 2, -0.25)
+mesh = ExtResource("5_48mhr")
+surface_material_override/0 = SubResource("StandardMaterial3D_qv3g8")
+
+[node name="CubeDiagCut16x16x23" type="MeshInstance3D" parent="." unique_id=1940698667]
+transform = Transform3D(-12.5, 0, 2.1855694e-08, 0, 0.25, 0, -1.0927847e-06, 0, -0.25, 6.25, -2, -0.25)
+mesh = ExtResource("5_48mhr")
+surface_material_override/0 = SubResource("StandardMaterial3D_qv3g8")
+
+[node name="default6" parent="." unique_id=1029647917 instance=ExtResource("8_0kkkq")]
+transform = Transform3D(0.258819, -0.68301266, -0.68301266, 0.9659258, 0.18301265, 0.1830127, -3.090862e-08, -0.70710677, 0.70710677, -2.1766942, -1.9942299, 0.18644035)
+
+[node name="default8" parent="." unique_id=1242587560 instance=ExtResource("8_0kkkq")]
+transform = Transform3D(0.258819, -0.68301266, -0.68301266, 0.9659258, 0.18301265, 0.1830127, -3.090862e-08, -0.70710677, 0.70710677, -1.8531659, -0.78837204, 0.18644035)
+
+[node name="default11" parent="." unique_id=1188115795 instance=ExtResource("8_0kkkq")]
+transform = Transform3D(-0.26997373, -0.6808502, -0.6808502, 0.9628676, -0.19090028, -0.1909002, -4.530203e-08, -0.7071067, 0.7071067, -0.24737322, -1.8763045, 0.18644035)
+
+[node name="default12" parent="." unique_id=250814873 instance=ExtResource("8_0kkkq")]
+transform = Transform3D(-0.78291345, -0.4399127, -0.43991268, 0.62213045, -0.5536034, -0.55360335, -4.5302027e-08, -0.70710665, 0.70710665, -0.60768056, -0.65770185, 0.18644035)
+
+[node name="default9" parent="." unique_id=527783789 instance=ExtResource("8_0kkkq")]
+transform = Transform3D(0.59950674, -0.5659468, -0.5659468, 0.8003697, 0.4239152, 0.42391527, -4.530203e-08, -0.7071067, 0.7071067, -1.6156956, 0.2820151, 0.18644035)
+
+[node name="default10" parent="." unique_id=1967896193 instance=ExtResource("8_0kkkq")]
+transform = Transform3D(0.9601594, -0.19760248, -0.19760251, 0.27945217, 0.67893517, 0.6789353, -6.316871e-08, -0.70710665, 0.70710665, -1.0176173, 1.1583625, 0.18644035)
+
 [connection signal="body_entered" from="InteractArea" to="." method="OnInteractAreaBodyEntered"]
 [connection signal="body_exited" from="InteractArea" to="." method="OnInteractAreaBodyExited"]
-
-[editable path="Beams/MoldyBeam7"]
-[editable path="Beams/MoldyBeam8"]
-[editable path="Beams/MoldyBeam9"]
-[editable path="Beams/MoldyBeam10"]
-[editable path="Beams/MoldyBeam11"]
-[editable path="Beams/MoldyBeam12"]

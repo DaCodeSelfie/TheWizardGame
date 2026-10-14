@@ -1,0 +1,101 @@
+[gd_scene format=3 uid="uid://cam20insfu2c1"]
+
+[ext_resource type="PackedScene" uid="uid://bq0ovpbj23num" path="res://Sprites/3DObjects/NewWallRimHole.gltf" id="1_r70dq"]
+[ext_resource type="PackedScene" uid="uid://c0qqe1t4xh0q0" path="res://Sprites/3DObjects/BrokenWallHole.gltf" id="2_kfrk8"]
+[ext_resource type="PackedScene" uid="uid://bk5rk6uq7xacg" path="res://Sprites/3DObjects/NewPillar.gltf" id="3_kfrk8"]
+[ext_resource type="ArrayMesh" uid="uid://vwp61tvwc3nt" path="res://Sprites/3DShape/cube-diag-cut-16x16x16.obj" id="4_ojoj5"]
+[ext_resource type="Texture2D" uid="uid://ddrmnsuil5l0e" path="res://Sprites/3DObjects/NewSlopenBeam90.png" id="5_tcp5b"]
+[ext_resource type="Texture2D" uid="uid://bhroe84keytgt" path="res://Sprites/2DArt/wOOD.png" id="6_tcp5b"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_7qs85"]
+albedo_texture = ExtResource("6_tcp5b")
+uv1_scale = Vector3(140, 5, 1)
+uv1_offset = Vector3(-0.065, 0, 0)
+uv2_triplanar = true
+texture_filter = 0
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_tcp5b"]
+albedo_texture = ExtResource("6_tcp5b")
+uv1_scale = Vector3(45, 5, 1)
+uv1_offset = Vector3(0.143, 0, 0)
+uv2_triplanar = true
+texture_filter = 0
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_fon3f"]
+albedo_texture = ExtResource("6_tcp5b")
+uv1_scale = Vector3(45, 5, 1)
+uv1_offset = Vector3(0.143, 0, 0)
+uv2_triplanar = true
+texture_filter = 0
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_2lfpe"]
+albedo_texture = ExtResource("5_tcp5b")
+uv1_scale = Vector3(16, 16, 1)
+uv1_triplanar_sharpness = 0.9518548
+uv2_triplanar = true
+texture_filter = 0
+
+[node name="StaticBody3D" type="StaticBody3D" unique_id=1368112180]
+
+[node name="default2" parent="." unique_id=1551334818 instance=ExtResource("1_r70dq")]
+
+[node name="default3" parent="." unique_id=285048740 instance=ExtResource("2_kfrk8")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 0.5, -0.25, -3.5, 0.25)
+
+[node name="default4" parent="." unique_id=369778121 instance=ExtResource("3_kfrk8")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.5, -4, -0.5)
+
+[node name="default5" parent="." unique_id=1539772058 instance=ExtResource("3_kfrk8")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 15.75, -4, -0.5)
+
+[node name="3DShapes" type="Node3D" parent="." unique_id=474498919]
+
+[node name="CubeDiagCut16x16x20" type="MeshInstance3D" parent="3DShapes" unique_id=1173482628]
+transform = Transform3D(12.5, 0, 0, 0, -1.0927847e-08, -0.25, 0, 0.25, -1.0927847e-08, 0.9998946, 0.5, 0.75)
+mesh = ExtResource("4_ojoj5")
+surface_material_override/0 = SubResource("StandardMaterial3D_7qs85")
+
+[node name="CubeDiagCut16x16x22" type="MeshInstance3D" parent="3DShapes" unique_id=693671602]
+transform = Transform3D(-12.5, 2.1855694e-08, -9.553427e-16, 0, -1.0927847e-08, -0.25, -1.0927847e-06, -0.25, 1.0927847e-08, 13.5, 0.5, 0.25)
+mesh = ExtResource("4_ojoj5")
+surface_material_override/0 = SubResource("StandardMaterial3D_7qs85")
+
+[node name="CubeDiagCut16x16x23" type="MeshInstance3D" parent="3DShapes" unique_id=1595538609]
+transform = Transform3D(5, -2.1855696e-08, -9.553428e-16, 0, -1.0927847e-08, 0.25, -4.3711393e-07, -0.25, -1.0927847e-08, 0.75, -3.5, 0.25)
+mesh = ExtResource("4_ojoj5")
+surface_material_override/0 = SubResource("StandardMaterial3D_tcp5b")
+
+[node name="CubeDiagCut16x16x24" type="MeshInstance3D" parent="3DShapes" unique_id=1597751584]
+transform = Transform3D(5, -2.1855696e-08, -9.553428e-16, 0, -1.0927847e-08, 0.25, -4.3711393e-07, -0.25, -1.0927847e-08, 8.75, -3.5, 0.25)
+mesh = ExtResource("4_ojoj5")
+surface_material_override/0 = SubResource("StandardMaterial3D_tcp5b")
+
+[node name="CubeDiagCut16x16x25" type="MeshInstance3D" parent="3DShapes" unique_id=779852360]
+transform = Transform3D(-5, 0, 1.0587912e-22, 1.5529406e-21, -1.0927846e-08, 0.25, 2.842171e-14, 0.25, 1.0927846e-08, 5.75, -3.5, 0.75)
+mesh = ExtResource("4_ojoj5")
+surface_material_override/0 = SubResource("StandardMaterial3D_tcp5b")
+
+[node name="CubeDiagCut16x16x26" type="MeshInstance3D" parent="3DShapes" unique_id=1133792994]
+transform = Transform3D(-5, 0, 1.0587912e-22, 1.5529406e-21, -1.0927846e-08, 0.25, 2.842171e-14, 0.25, 1.0927846e-08, 13.75, -3.5, 0.75)
+mesh = ExtResource("4_ojoj5")
+surface_material_override/0 = SubResource("StandardMaterial3D_fon3f")
+
+[node name="CubeDiagCut16x16x16" type="MeshInstance3D" parent="3DShapes" unique_id=969067206]
+transform = Transform3D(-2.1855695e-07, 0.75, 0, -5, -3.278354e-08, 0, 0, 0, 0.75, 0.5, 1, 0.75)
+mesh = ExtResource("4_ojoj5")
+surface_material_override/0 = SubResource("StandardMaterial3D_2lfpe")
+
+[node name="CubeDiagCut16x16x17" type="MeshInstance3D" parent="3DShapes" unique_id=912904983]
+transform = Transform3D(-2.1855695e-07, -0.75, 0, 5, -3.278354e-08, 0, 0, 0, 0.75, 13.75, -4, 0.76)
+mesh = ExtResource("4_ojoj5")
+surface_material_override/0 = SubResource("StandardMaterial3D_2lfpe")
+
+[node name="CubeDiagCut16x16x18" type="MeshInstance3D" parent="3DShapes" unique_id=1735220080]
+transform = Transform3D(9.553427e-15, 3.278354e-08, -0.75, 5, -3.278354e-08, 0, -2.1855695e-07, -0.75, -3.278354e-08, 13.75, -4, 0.25)
+mesh = ExtResource("4_ojoj5")
+surface_material_override/0 = SubResource("StandardMaterial3D_2lfpe")
+
+[node name="CubeDiagCut16x16x19" type="MeshInstance3D" parent="3DShapes" unique_id=1977897756]
+transform = Transform3D(9.553427e-15, -3.278354e-08, 0.75, -5, -3.278354e-08, 0, 2.1855695e-07, -0.75, -3.278354e-08, 0.5, 1, 0.25)
+mesh = ExtResource("4_ojoj5")
+surface_material_override/0 = SubResource("StandardMaterial3D_2lfpe")

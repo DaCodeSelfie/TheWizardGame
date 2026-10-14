@@ -2,20 +2,24 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://d3gn2iud1osns"
-path="res://.godot/imported/BeamNewSloped.png-82f071106536af12dbcba7e1376fd45c.ctex"
+uid="uid://cn2o2q8fw0fkn"
+path.s3tc="res://.godot/imported/DirtRodCrack8x8_0.png-544cb1d762451e21f8e350beba20ce20.s3tc.ctex"
 metadata={
-"vram_texture": false
+"imported_formats": ["s3tc_bptc"],
+"vram_texture": true
+}
+generator_parameters={
+"md5": "2444e2844d2d6788cbc6fffadf0e3e4b"
 }
 
 [deps]
 
-source_file="res://BeamNewSloped.png"
-dest_files=["res://.godot/imported/BeamNewSloped.png-82f071106536af12dbcba7e1376fd45c.ctex"]
+source_file="res://Sprites/3DObjects/DirtRodCrack8x8_0.png"
+dest_files=["res://.godot/imported/DirtRodCrack8x8_0.png-544cb1d762451e21f8e350beba20ce20.s3tc.ctex"]
 
 [params]
 
-compress/mode=0
+compress/mode=2
 compress/high_quality=false
 compress/lossy_quality=0.7
 compress/uastc_level=0
@@ -23,7 +27,7 @@ compress/rdo_quality_loss=0.0
 compress/hdr_compression=1
 compress/normal_map=0
 compress/channel_pack=0
-mipmaps/generate=false
+mipmaps/generate=true
 mipmaps/limit=-1
 roughness/mode=0
 roughness/src_normal=""

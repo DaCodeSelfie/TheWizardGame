@@ -2,17 +2,20 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bhroe84keytgt"
-path.s3tc="res://.godot/imported/wOOD.png-1b764ca40b96da383f9540a39d71855b.s3tc.ctex"
+uid="uid://0vdjx6t0l5"
+path.s3tc="res://.godot/imported/BrokenWallHole_0.png-e8a100f4ddcce87c2ca8f2d7d38914b3.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
 }
+generator_parameters={
+"md5": "2444e2844d2d6788cbc6fffadf0e3e4b"
+}
 
 [deps]
 
-source_file="res://wOOD.png"
-dest_files=["res://.godot/imported/wOOD.png-1b764ca40b96da383f9540a39d71855b.s3tc.ctex"]
+source_file="res://Sprites/3DObjects/BrokenWallHole_0.png"
+dest_files=["res://.godot/imported/BrokenWallHole_0.png-e8a100f4ddcce87c2ca8f2d7d38914b3.s3tc.ctex"]
 
 [params]
 

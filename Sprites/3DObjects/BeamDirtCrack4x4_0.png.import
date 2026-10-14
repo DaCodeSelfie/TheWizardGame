@@ -2,20 +2,24 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://ddrmnsuil5l0e"
-path="res://.godot/imported/NewSlopenBeam90.png-8a904a682c8af7d8db15917157b76269.ctex"
+uid="uid://diwwk1jov31xb"
+path.s3tc="res://.godot/imported/BeamDirtCrack4x4_0.png-427f85d757f306d57ffa64b701b52b42.s3tc.ctex"
 metadata={
-"vram_texture": false
+"imported_formats": ["s3tc_bptc"],
+"vram_texture": true
+}
+generator_parameters={
+"md5": "2444e2844d2d6788cbc6fffadf0e3e4b"
 }
 
 [deps]
 
-source_file="res://NewSlopenBeam90.png"
-dest_files=["res://.godot/imported/NewSlopenBeam90.png-8a904a682c8af7d8db15917157b76269.ctex"]
+source_file="res://Sprites/3DObjects/BeamDirtCrack4x4_0.png"
+dest_files=["res://.godot/imported/BeamDirtCrack4x4_0.png-427f85d757f306d57ffa64b701b52b42.s3tc.ctex"]
 
 [params]
 
-compress/mode=0
+compress/mode=2
 compress/high_quality=false
 compress/lossy_quality=0.7
 compress/uastc_level=0
@@ -23,7 +27,7 @@ compress/rdo_quality_loss=0.0
 compress/hdr_compression=1
 compress/normal_map=0
 compress/channel_pack=0
-mipmaps/generate=false
+mipmaps/generate=true
 mipmaps/limit=-1
 roughness/mode=0
 roughness/src_normal=""

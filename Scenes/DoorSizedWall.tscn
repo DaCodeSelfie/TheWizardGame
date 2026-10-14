@@ -1,9 +1,47 @@
 [gd_scene format=3 uid="uid://koquumsjxlv2"]
 
 [ext_resource type="PackedScene" uid="uid://b55b6mbvohqfm" path="res://Sprites/3DObjects/SmallWallNew.gltf" id="1_41par"]
+[ext_resource type="ArrayMesh" uid="uid://vwp61tvwc3nt" path="res://Sprites/3DShape/cube-diag-cut-16x16x16.obj" id="4_tcqh2"]
 [ext_resource type="PackedScene" uid="uid://ctq0f36h5dfa8" path="res://Sprites/3DObjects/NewSmallWall.gltf" id="5_6wue2"]
+[ext_resource type="Texture2D" uid="uid://bhroe84keytgt" path="res://Sprites/2DArt/wOOD.png" id="5_tcqh2"]
+[ext_resource type="Texture2D" uid="uid://ddrmnsuil5l0e" path="res://Sprites/3DObjects/NewSlopenBeam90.png" id="5_w2o4m"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_3ny47"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_hh1a5"]
+albedo_texture = ExtResource("5_w2o4m")
+uv1_scale = Vector3(16, 16, 1)
+uv1_triplanar_sharpness = 0.9518548
+uv2_triplanar = true
+texture_filter = 0
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_tcqh2"]
+albedo_texture = ExtResource("5_w2o4m")
+uv1_scale = Vector3(16, 16, 1)
+uv1_triplanar_sharpness = 0.9518548
+uv2_triplanar = true
+texture_filter = 0
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_6wue2"]
+albedo_texture = ExtResource("5_w2o4m")
+uv1_scale = Vector3(16, 16, 1)
+uv1_triplanar_sharpness = 0.9518548
+uv2_triplanar = true
+texture_filter = 0
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_w2o4m"]
+albedo_texture = ExtResource("5_w2o4m")
+uv1_scale = Vector3(16, 16, 1)
+uv1_triplanar_sharpness = 0.9518548
+uv2_triplanar = true
+texture_filter = 0
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_p4jnr"]
+albedo_texture = ExtResource("5_tcqh2")
+uv1_scale = Vector3(70, 5, 1)
+uv1_offset = Vector3(0.12, 0, 0)
+uv2_triplanar = true
+texture_filter = 0
 
 [node name="Wall" type="StaticBody3D" unique_id=953180017]
 
@@ -16,3 +54,43 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 0.5, -3.5, -2, -0.25)
 [node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1760823512]
 transform = Transform3D(9, 0, 0, 0, 5, 0, 0, 0, 1, 0, 0, 0)
 shape = SubResource("BoxShape3D_3ny47")
+
+[node name="CubeDiagCut16x16x16" type="MeshInstance3D" parent="." unique_id=806050596]
+transform = Transform3D(-2.1855695e-07, 0.75, 0, -5, -3.278354e-08, 0, 0, 0, 0.75, -2.7498164, 2.5, 0.25)
+mesh = ExtResource("4_tcqh2")
+surface_material_override/0 = SubResource("StandardMaterial3D_hh1a5")
+
+[node name="CubeDiagCut16x16x17" type="MeshInstance3D" parent="." unique_id=1249370299]
+transform = Transform3D(-2.1855695e-07, -0.75, 0, 5, -3.278354e-08, 0, 0, 0, 0.75, 2.75, -2.5, 0.25)
+mesh = ExtResource("4_tcqh2")
+surface_material_override/0 = SubResource("StandardMaterial3D_tcqh2")
+
+[node name="CubeDiagCut16x16x18" type="MeshInstance3D" parent="." unique_id=65068706]
+transform = Transform3D(9.553427e-15, 3.278354e-08, -0.75, 5, -3.278354e-08, 0, -2.1855695e-07, -0.75, -3.278354e-08, 2.75, -2.5, -0.25)
+mesh = ExtResource("4_tcqh2")
+surface_material_override/0 = SubResource("StandardMaterial3D_6wue2")
+
+[node name="CubeDiagCut16x16x19" type="MeshInstance3D" parent="." unique_id=1655015723]
+transform = Transform3D(9.553427e-15, -3.278354e-08, 0.75, -5, -3.278354e-08, 0, 2.1855695e-07, -0.75, -3.278354e-08, -2.75, 2.5, -0.25)
+mesh = ExtResource("4_tcqh2")
+surface_material_override/0 = SubResource("StandardMaterial3D_w2o4m")
+
+[node name="CubeDiagCut16x16x20" type="MeshInstance3D" parent="." unique_id=1773911307]
+transform = Transform3D(7.5, 0, 0, 0, -1.0927847e-08, -0.25, 0, 0.25, -1.0927847e-08, -3.75, 2, 0.25)
+mesh = ExtResource("4_tcqh2")
+surface_material_override/0 = SubResource("StandardMaterial3D_p4jnr")
+
+[node name="CubeDiagCut16x16x21" type="MeshInstance3D" parent="." unique_id=841236830]
+transform = Transform3D(-7.5, 9.553426e-16, 2.1855694e-08, 6.556708e-07, 1.0927846e-08, 0.25, 0, 0.25, -1.0927846e-08, 3.75, -2, 0.25)
+mesh = ExtResource("4_tcqh2")
+surface_material_override/0 = SubResource("StandardMaterial3D_p4jnr")
+
+[node name="CubeDiagCut16x16x22" type="MeshInstance3D" parent="." unique_id=1834320390]
+transform = Transform3D(-7.5, -2.1855694e-08, 9.553426e-16, 0, -1.0927846e-08, -0.25, 6.556708e-07, -0.25, 1.0927846e-08, 3.75, 2, -0.25)
+mesh = ExtResource("4_tcqh2")
+surface_material_override/0 = SubResource("StandardMaterial3D_p4jnr")
+
+[node name="CubeDiagCut16x16x23" type="MeshInstance3D" parent="." unique_id=523339062]
+transform = Transform3D(7.5, -2.1855696e-08, -2.1855694e-08, 6.556708e-07, 1.0927846e-08, 0.25, -6.556708e-07, -0.25, 1.0927848e-08, -3.75, -2, -0.25)
+mesh = ExtResource("4_tcqh2")
+surface_material_override/0 = SubResource("StandardMaterial3D_p4jnr")

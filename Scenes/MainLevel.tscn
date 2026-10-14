@@ -56,7 +56,7 @@ size = Vector3(51.523518, 1, 29.021286)
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10.576986, 0.32333088, -5.4764824)
 
 [node name="CharacterBody3D" parent="PlayerThings" unique_id=1307986412 node_paths=PackedStringArray("Spells") instance=ExtResource("1_8vsrk")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.609823, 7.6293945e-06, 1.0038033)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 130.4484, 7.6293945e-06, -121.22801)
 Spells = [NodePath("../FireballSpellNode"), NodePath("../LightningSpellNode"), NodePath("../WaterSpellNode")]
 
 [node name="FireballSpellNode" type="Node" parent="PlayerThings" unique_id=2096541577]
@@ -1298,6 +1298,7 @@ transform = Transform3D(-4.371139e-08, -1, 0, 1, -4.371139e-08, 0, 0, 0, 1, -4.6
 
 [node name="CellarFloor194" parent="Floor" unique_id=1037761889 instance=ExtResource("6_0e82a")]
 transform = Transform3D(-4.371139e-08, -1, 0, 1, -4.371139e-08, 0, 0, 0, 1, -4.650008, 115.3544, -113.86663)
+visible = false
 
 [node name="CellarFloor195" parent="Floor" unique_id=1106029483 instance=ExtResource("6_0e82a")]
 transform = Transform3D(-4.371139e-08, -1, 0, 1, -4.371139e-08, 0, 0, 0, 1, -4.6500063, 85.3544, -113.86663)
